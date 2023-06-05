@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@media screen and (max-width:320px){
+    .c_stop .stop_info h2{font-size:27px; font-weight:500;}
+    .c_stop .stop_info p{font-size:18px;}
+ }
+
+/************************* sub *************************/
+
+@media screen and (max-width:430px){
+    .map{height:190px;}
+    .map p{line-height:190px;}
+ }
+
+@media screen and (max-width:395px){
+    .loca_confirm p{font-size:21px; margin-bottom:8px;}
+    .loca_confirm b.d_address{font-size:18px;}
+    .loca_confirm b.destination{font-size:32px;}
+    .loca_confirm b.d_type{font-size:18px;}
+ }
