@@ -2,6 +2,8 @@
 #wrap{position:relative; min-width:320px; max-width:768px; margin:0 auto;}
 .inner{width:90%; margin:0 auto;}
 
+
+/* search.html */
 .location{box-shadow:0px 3px 8px 0px rgba(0,0,0,.3); z-index:9999;}
 
 .location .back{width:100px; height:30px; background:#222; color:#fff; line-height:30px; text-align:center; margin-top:15px; margin-right:5%; float:right; cursor:pointer;
@@ -59,8 +61,13 @@
 .dtn_rcmd ul li .selected_rdtn{font-size:32px; font-weight:500;}
 .dtn_rcmd ul li .rdtn_checked{position:absolute; right:15px; bottom:15px;}
 
+/* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
+.dtn_rcmd ul::-webkit-scrollbar {display: none;}
+/* 인터넷 익스플로러 / 파이어폭스 */  
+.dtn_rcmd ul{-ms-overflow-style: none;  scrollbar-width: none;}
+
 
 /********************************************************************/
 
-/*buslist.html*/
+/* buslist.html */
 
