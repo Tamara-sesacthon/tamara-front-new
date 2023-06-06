@@ -4,6 +4,8 @@
 
 
 /* search.html */
+
+/** location(목적지) **/
 .location{box-shadow:0px 3px 8px 0px rgba(0,0,0,.3); z-index:9999;}
 
 .location .back{width:100px; height:30px; background:#222; color:#fff; line-height:30px; text-align:center; margin-top:15px; margin-right:5%; float:right; cursor:pointer;
@@ -17,6 +19,7 @@
 .map{width:100%; height:160px; background:#f1f1f1;}
 .map p{line-height:160px; text-align:center;}
 
+/** loca_confirm(목적지 확인) **/
 .loca_confirm{width:100%; margin-top:20px; text-align:center; padding:10px; border:2px solid #555;}
 .loca_confirm p{font-size:24px; margin-bottom:15px;}
 .loca_confirm p:last-child{margin-bottom:0;}
@@ -24,42 +27,43 @@
 .loca_confirm b.destination{font-size:36px;}
 .loca_confirm b.d_type{font-size:21px;}
 
+/** buttons(버튼) **/
 .buttons .d_confirm,
 .buttons .d_relation{width:100%; height:60px; font-size:18px; text-align:center; line-height:60px; margin-top:15px; cursor:pointer; 
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -o-border-radius:10px;}
-
 .buttons .d_confirm{background:#222; font-weight:500; color:#fff;}
 .buttons .d_relation{border:1px solid #808080; color:#808080;}
 
+/** dtn_now(현재 목적지) **/
 .dtn_now{margin-top:30px;}
 .dtn_now h2{font-size:24px; font-weight:500;}
-.dtn_now .dtnn_box{position:relative; width:100%; height:160px; border:1px solid #aaa; margin-top:10px; padding:15px;
+.dtn_now .dtnn_box{position:relative; width:100%; height:160px; border:1px solid #222; margin-top:10px; padding:15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -o-border-radius:10px;}
-
-.dtn_now .dtnn_box p{font-size:18px; color:#aaa;}
+.dtn_now .dtnn_box p{font-size:18px; color:#222;}
 .dtn_now .dtnn_box .selected_dtn{font-size:32px; font-weight:500;}
 .dtn_now .dtnn_box .dtn_checked{position:absolute; right:15px; bottom:15px;}
 
-.active{border-color:#222 !important; color:#222 !important;}
+.active{border-color:#aaa !important; color:#aaa !important;}
 
+/** dtn_rcmd(목적지 추천) **/
 .dtn_rcmd{margin-top:30px;}
 .dtn_rcmd h2{font-size:24px; font-weight:500;}
 .dtn_rcmd ul{height:500px; margin-top:10px; overflow-y:auto;}
-.dtn_rcmd ul li{position:relative; width:100%; height:160px; border:1px solid #aaa; margin-bottom:15px; padding:15px;
+.dtn_rcmd ul li{position:relative; width:100%; height:160px; border:1px solid #222; margin-bottom:15px; padding:15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -o-border-radius:10px;}
 
-.dtn_rcmd ul li p{font-size:18px; color:#aaa;}
+.dtn_rcmd ul li p{font-size:18px; color:#222;}
 .dtn_rcmd ul li .selected_rdtn{font-size:32px; font-weight:500;}
-.dtn_rcmd ul li .rdtn_checked{position:absolute; right:15px; bottom:15px;}
+.dtn_rcmd ul li .rdtn_checked{position:absolute; right:15px; bottom:15px; display:none;}
 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
 .dtn_rcmd ul::-webkit-scrollbar {display: none;}
