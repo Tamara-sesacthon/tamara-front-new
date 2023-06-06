@@ -1,31 +1,33 @@
 $(document).ready(function(){
-	//bus_popup
-	$("#confirm").click(function(){
-		modalClose();
-	});
-	$(".modal-open").click(function(){        
-		$("#popup").css('display','flex').hide().fadeIn();
-	});
-	$("#refresh").click(function(){
-		modalClose();
-	});
+	/* index.html */
+	//common_modal
 	function modalClose(){
-		$("#popup").fadeOut(); 
-	}
-	//station_popup
-	$("#sconfirm").click(function(){
-		modalClose();
-	});
-	$(".smodal-open").click(function(){        
-		$("#spopup").css('display','flex').hide().fadeIn();
-	});
-	$("#srefresh").click(function(){
-		modalClose(); 
-	});
-	function modalClose(){
-		$("#spopup").fadeOut(); 
+		$(".modal_wrap").fadeOut(); 
 	}
 
+	//bus_modal
+	$("#bus_confirm").click(function(){
+		modalClose();
+	});
+	$(".station_modal_open").click(function(){        
+		$("#station_modal").css('display','flex').hide().fadeIn();
+	});
+	$("#bus_refresh").click(function(){
+		modalClose();
+	});
+
+	//station_modal
+	$("#station_confirm").click(function(){
+		modalClose();
+	});
+	$(".bus_modal_open").click(function(){        
+		$("#bus_modal").css('display','flex').hide().fadeIn();
+	});
+	$("#station_refresh").click(function(){
+		modalClose(); 
+	});
+
+	/* search.html */
 	$(".dtnn_box").click(function(){        
         if($(".dtnn_box").hasClass("active")){
             $(".dtnn_box").removeClass("active");
