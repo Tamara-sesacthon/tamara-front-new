@@ -6,7 +6,7 @@
 /* search.html */
 
 /** location(목적지) **/
-.location{box-shadow:0px 3px 8px 0px rgba(0,0,0,.3); z-index:9999;}
+.location{position:fixed; top:0; width:100%; max-width:768px; min-width:320px; height:95px; box-shadow:0px 3px 8px 0px rgba(0,0,0,.3); background:#fff; z-index:9999;}
 
 .location .back{width:100px; height:30px; background:#222; color:#fff; line-height:30px; text-align:center; margin-top:15px; margin-right:5%; float:right; cursor:pointer;
     border-radius:50px;
@@ -16,7 +16,7 @@
 
 .location .nloca{clear:both; width:100%; height:50px;}
 .location .nloca p{font-size:21px; font-weight:500; line-height:50px; margin-left:5%;}
-.map{width:100%; height:160px; background:#f1f1f1;}
+.map{width:100%; height:160px; background:#f1f1f1; margin-top:95px;}
 .map p{line-height:160px; text-align:center;}
 
 /** loca_confirm(목적지 확인) **/
@@ -75,3 +75,51 @@
 
 /* buslist.html */
 
+/** back button **/
+.search_back{width:100px; height:30px; background:#222; color:#fff; line-height:30px; text-align:center; margin-top:15px; margin-right:5%; float:right; cursor:pointer;
+    border-radius:50px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    -o-border-radius:50px;}
+    
+/** destination_box(선택된 목적지) **/
+.destination_box{width:100%; height:160px; border:1px solid #222; margin-top:50px; padding:15px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;}
+.destination_box p{font-size:18px; color:#222;}
+.destination_box .name_destination{font-size:32px; font-weight:500;}
+
+
+.list_buses{width:100%; margin-top:20px;}
+.list_buses h2{font-size:24px; font-weight:500;}
+.fast_buses{margin-top:15px;}
+.fast_bus_list,
+.comfortable_bus_list{max-width:100%; height:80px; background:#f2f2f2; overflow:auto; white-space: nowrap; margin-top:15px; padding:10px;}
+
+.fast_bus_list ul li,
+.comfortable_bus_list ul li{display:inline-block; width:125px; height:60px; background:#222; font-size:32px; font-weight:700; color:#fff; line-height:60px; text-align:center; margin-right:10px; cursor:pointer;
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-o-border-radius:15px;}
+    .fast_bus_list ul li:last-child{margin-right:0;}
+
+.fast_buses h3,
+.comfortable_buses h3{font-size:18px;}
+.comfortable_buses{margin-top:25px;}
+
+/** recommend_buses(기타 버스 리스트) **/
+.recommend_buses{margin-top:25px;}
+.recommend_buses h2{font-size:24px; font-weight:500;}
+
+.recommend_buses ul{width:100%; height:500px; margin-top:10px; overflow-y:auto;}
+.recommend_buses ul li{position:relative; width:100%; height:160px; border:1px solid #222; margin-bottom:15px; padding:15px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;}
+
+.recommend_buses ul li p{font-size:18px; color:#222;}
+.recommend_buses ul li .name_r_destination{font-size:32px; font-weight:500;}
