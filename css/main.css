@@ -3,16 +3,35 @@
 .inner{width:90%; margin:0 auto;}
 
 /* est_arrival */
-.est_arrival{margin-top:45px; height:280px;}
-.est_arrival > h2{font-size:24px; font-weight:500;}
+.bg_est_arrival{padding-top:45px; padding-bottom:20px; background:#111;}
+.est_arrival{height:280px;}
+.est_arrival .inner > h2{font-size:24px; font-weight:500; color:#f8de4b;}
 
-.est_arrival .esta_list{max-width:100%; height:80px; background:#f2f2f2; overflow:auto; white-space: nowrap; margin-top:15px; padding:10px;}
-.est_arrival .esta_list ul li{display:inline-block; width:125px; height:60px; background:#222; font-size:32px; font-weight:700; color:#fff; line-height:60px; text-align:center; margin-right:10px; cursor:pointer;
+/** esta_list **/
+.est_arrival .esta_list{max-width:100%; height:80px; background:#161616; overflow:auto; white-space: nowrap; margin-top:10px; padding:15px;}
+.est_arrival .esta_list ul{line-height:0;}
+.est_arrival .esta_list ul li{display:flex; width:135px; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
 	border-radius:15px;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
-	-o-border-radius:15px;}
+	-o-border-radius:15px;
+}
 .est_arrival .esta_list ul li:last-child{margin-right:0;}
+
+.est_arrival .esta_list ul li{display:inline-block;}
+.est_arrival .esta_list ul li .bus_profile{display:flex; align-items:center;}
+.bus_profile .bus_category{width:35px; height:50px; background:#fff; padding-top:6px;}
+.bus_profile .bus_category p{font-size:18px; font-weight:500; color:#888; line-height:35px; letter-spacing:0.5px; writing-mode: vertical-rl;}
+.bus_profile .bus_number{width:100px; height:50px; text-align:center;}
+.bus_profile .bus_number p{font-size:21px; font-weight:500; color:#fff; line-height:50px;}
+
+.est_arrival .esta_list ul li:nth-child(1) .bus_profile .bus_number{background:#85664f;}
+.est_arrival .esta_list ul li:nth-child(2) .bus_profile .bus_number{background:#ca492c;}
+.est_arrival .esta_list ul li:nth-child(3) .bus_profile .bus_number{background:#5c6dec;}
+.est_arrival .esta_list ul li:nth-child(4) .bus_profile .bus_number{background:#5b9c34;}
+.est_arrival .esta_list ul li:nth-child(5) .bus_profile .bus_number{background:#b19036;}
+.est_arrival .esta_list ul li:nth-child(6) .bus_profile .bus_number{background:#4f70ba;}
+.est_arrival .esta_list ul li:nth-child(7) .bus_profile .bus_number{background:#5a9c34;}
 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
 .est_arrival .esta_list::-webkit-scrollbar {display: none;}
@@ -20,17 +39,23 @@
 .est_arrival .esta_list{-ms-overflow-style: none;  scrollbar-width: none;}
 
 /** c_stop **/
-.c_stop{display:flex; align-items:flex-start; justify-content:space-between; width:100%; height:120px; border:2px solid #555; padding:15px; margin-top:15px;}
-.c_stop .stop_info h2{font-size:32px; font-weight:500;}
-.c_stop .stop_info p{font-size:21px;}
-.c_stop span{width:100px; height:30px; background:#222; color:#fff; line-height:30px; text-align:center; cursor:pointer;
+.c_stop{display:flex; align-items:flex-start; justify-content:space-between; width:100%; height:120px; border:2px solid #555555; background:#fff; padding:15px; margin-top:15px;
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-o-border-radius:15px;
+}
+.c_stop .stop_info h2{font-size:24px; font-weight:500;}
+.c_stop .stop_info p{font-size:16px;}
+.c_stop span{width:110px; height:30px; background:#2a8dde; color:#fff; line-height:30px; text-align:center; cursor:pointer;
 border-radius:50px;
 -webkit-border-radius:50px;
 -moz-border-radius:50px;
--o-border-radius:50px;}
+-o-border-radius:50px;
+}
 
 /** modal **/
-.modal_wrap{width:100%; height:280px; background-color:rgba(0,0,0,.3); justify-content:center; align-items:center; position:fixed; top:0; left:0; margin-top:45px; display:none;}
+.modal_wrap{width:100%; height:100%; background-color:rgba(0,0,0,.3); justify-content:center; align-items:center; position:fixed; top:0; left:0; display:none;}
 .modal{width:90%; border-radius:10px; overflow:hidden; background-color:#222; box-shadow: 5px 10px 10px 1px rgba(0,0,0,.3);}
 .modal_head{width:100%; height:50px; display:flex; align-items:center; justify-content:center; font-weight:500; color:#fff; }
 .modal_body{width:100%; background-color:#ffffff;}
@@ -43,8 +68,66 @@ border-radius:50px;
 .modal_btn.confirm{border-right:1px solid #fff;}
 
 /* wheretogo */
-.wheretogo{margin-top:100px;}
-.wheretogo h2{font-size:24px; font-weight:500; margin-bottom:10px;}
-.wheretogo .wtg_search{width:100%;}
-.wheretogo .wtg_search form{display:flex; align-items:center; justify-content:space-between;}
-.wheretogo .wtg_search span{margin-left:5px; cursor:pointer;}
+.wheretogo{margin-top:50px; margin-bottom:400px;}
+.wheretogo h2{font-size:21px; font-weight:500; margin-bottom:10px;}
+.wheretogo .wtg_search{display:flex; width:100%;}
+.wheretogo .wtg_search form{display:flex; align-items:center;}
+.wheretogo .wtg_search form span{margin-left:-55px; cursor:pointer;}
+
+/**********************************/
+
+
+/* location*/
+.map{width:100%; height:160px; background:#f1f1f1; margin-top:0px;}
+.map p{line-height:160px; text-align:center;}
+
+/** loca_confirm(목적지 확인) **/
+.loca_confirm{width:100%; margin-top:20px; text-align:center; padding:10px; border:2px solid #555;}
+.loca_confirm p{font-size:24px; margin-bottom:15px;}
+.loca_confirm p:last-child{margin-bottom:0;}
+.loca_confirm b.d_address{font-size:21px;}
+.loca_confirm b.destination{font-size:36px;}
+.loca_confirm b.d_type{font-size:21px;}
+
+/** buttons(버튼) **/
+.buttons .d_confirm,
+.buttons .d_relation{width:100%; height:60px; font-size:18px; text-align:center; line-height:60px; margin-top:15px; cursor:pointer; 
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;}
+.buttons .d_confirm{background:#222; font-weight:500; color:#fff;}
+.buttons .d_relation{border:1px solid #808080; color:#808080;}
+
+/** dtn_now(현재 목적지) **/
+.dtn_now{margin-top:30px;}
+.dtn_now h2{font-size:24px; font-weight:500;}
+.dtn_now .dtnn_box{position:relative; width:100%; height:160px; border:1px solid #222; margin-top:10px; padding:15px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;}
+.dtn_now .dtnn_box p{font-size:18px; color:#222;}
+.dtn_now .dtnn_box .selected_dtn{font-size:32px; font-weight:500;}
+.dtn_now .dtnn_box .dtn_checked{position:absolute; right:15px; bottom:15px;}
+
+.active{border-color:#aaa !important; color:#aaa !important;}
+
+/** dtn_rcmd(목적지 추천) **/
+.dtn_rcmd{margin-top:30px;}
+.dtn_rcmd h2{font-size:24px; font-weight:500;}
+.dtn_rcmd ul{height:500px; margin-top:10px; overflow-y:auto;}
+.dtn_rcmd ul li{position:relative; width:100%; height:160px; border:1px solid #222; margin-bottom:15px; padding:15px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;}
+
+.dtn_rcmd ul li p{font-size:18px; color:#222;}
+.dtn_rcmd ul li .selected_rdtn{font-size:32px; font-weight:500;}
+.dtn_rcmd ul li .rdtn_checked{position:absolute; right:15px; bottom:15px; display:none;}
+
+/* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
+.dtn_rcmd ul::-webkit-scrollbar {display: none;}
+/* 인터넷 익스플로러 / 파이어폭스 */  
+.dtn_rcmd ul{-ms-overflow-style: none;  scrollbar-width: none;}
