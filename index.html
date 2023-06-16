@@ -94,12 +94,29 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="c_stop">
-                        <div class="stop_info">
-                            <h2>정류장 이름</h2>
-                            <p>정류장 번호</p>
+                    <div class="c_stop station_modal_open">
+                        <span class="btn_prev" id="BtnPrev"><img src="image/prev_arrow.png" alt="BtnPrev"></span>
+				        <span class="btn_next" id="BtnNext"><img src="image/next_arrow.png" alt="BtnNext"></span>
+                        <div class="stop_info_slider">
+                            <div class="items">
+                                <div class="items_content">
+                                    <h2>정류장 이름</h2>
+                                    <p>정류장 번호</p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="items_content">
+                                    <h2>정류장 이름</h2>
+                                    <p>정류장 번호</p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="items_content">
+                                    <h2>정류장 이름</h2>
+                                    <p>정류장 번호</p>
+                                </div>
+                            </div>             
                         </div>
-                        <span class="station_modal_open">정류장 상세</span>
                     </div>
                     <div class="modal_wrap" id="bus_modal">
                         <div class="modal">
@@ -138,8 +155,8 @@
                                 </div>
                             </div>
                             <div class="modal_foot">
-                                <span class="modal_btn" id="station_confirm">확인</span>
-                                <span class="modal_btn" id="station_refresh">정류장 변경</span>
+                                <span class="modal_btn confirm" id="station_confirm">확인</span>
+                                <span class="modal_btn refresh" id="station_refresh">정류장 변경</span>
                             </div>
                         </div>
                     </div>
@@ -154,9 +171,9 @@
                 <h2>어디로 가시나요?</h2>
                 <div class="wtg_search">
                     <form action="">
-                        <input type="text" id="" name="" maxlength="16" class="form_w80" placeholder="장소를 입력해주세요.">
+                        <input type="text" id="" name="" maxlength="16" class="form_w90" placeholder="장소를 입력해주세요.">
+                        <span><img src="image/search_icon.png" alt="목적지 검색"></span>
                     </form>
-                    <span><img src="image/search_icon.png" alt="목적지 검색" onclick="location.href='html/search/search.html'"></span>
                 </div>
             </div>
         </div>
@@ -182,43 +199,47 @@
                     <p class="active">종로구 창경궁로 88</p>
                     <p class="selected_dtn active">광장시장</p>
                     <p class="active">시장</p>
-                    <p class="dtn_checked active">선택됨</p>
+                    <span class="selected_flag"><img src="image/active_flag_icon.png" alt="선택 아이콘"></span>
                 </div>
             </div>
             <div class="dtn_rcmd">
                 <h2>혹시 이곳은 아닌가요?</h2>
                 <ul>
                     <li>
-                        <p>종로구 창경궁로 88</p>
-                        <p class="selected_rdtn">광장시장</p>
+                        <p>서울 중구 남대문시장4길 21</p>
+                        <p class="selected_rdtn">남대문시장</p>
                         <p>시장</p>
-                        <p class="rdtn_checked">선택됨</p>
+                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
+                    </li>
+                    <li>
+                        <p>종로6가 270-3</p>
+                        <p class="selected_rdtn">동대문종합시장</p>
+                        <p>시장</p>
+                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
+                    </li>
+                    <li>
+                        <p>동작구 노들로 674</p>
+                        <p class="selected_rdtn">노량진수산물도매시장</p>
+                        <p>시장</p>
+                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
+                    </li>
+                    <li>
+                        <p>송파구 양재대로 932</p>
+                        <p class="selected_rdtn">가락농수산물종합도매시장</p>
+                        <p>시장</p>
+                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
                     <li>
                         <p>종로구 창경궁로 88</p>
                         <p class="selected_rdtn">광장시장</p>
                         <p>시장</p>
-                        <p class="rdtn_checked">선택됨</p>
+                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
-                    <li>
-                        <p>종로구 창경궁로 88</p>
-                        <p class="selected_rdtn">광장시장</p>
-                        <p>시장</p>
-                        <p class="rdtn_checked">선택됨</p>
-                    </li>
-                    <li>
-                        <p>종로구 창경궁로 88</p>
-                        <p class="selected_rdtn">광장시장</p>
-                        <p>시장</p>
-                        <p class="rdtn_checked">선택됨</p>
-                    </li>
-                    <li>
-                        <p>종로구 창경궁로 88</p>
-                        <p class="selected_rdtn">광장시장</p>
-                        <p>시장</p>
-                        <p class="rdtn_checked">선택됨</p>
-                    </li>
+                    <div class="more_recommend">
+                        <span><img src="image/more_recommend.png" alt="목록 불러오기"></span>
+                    </div>
                 </ul>
+                
             </div>
         </div>
 
