@@ -12,6 +12,7 @@
     .map p{line-height:190px;}
  }
 
+
 @media screen and (max-width:395px){
     .loca_confirm p{font-size:21px; margin-bottom:8px;}
     .loca_confirm b.d_address{font-size:18px;}
