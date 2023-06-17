@@ -1,5 +1,20 @@
 $(document).ready(function(){
 	/* index.html */
+
+	//stop_info_slider
+	$(".stop_info_slider").slick({
+		autoplay:false,
+		infinite: true,
+		slidesToShow:1,
+		dots:false,
+		arrows:true,
+		speed:500,
+		prevArrow:$("#BtnPrev"),
+		nextArrow:$("#BtnNext"),
+		focusOnSelect:false,
+		variableWidth:false,
+	});
+
 	//common_modal
 	function modalClose(){
 		$(".modal_wrap").fadeOut(); 
@@ -28,6 +43,7 @@ $(document).ready(function(){
 	});
 
 	/* search.html */
+	/*
 	$(".dtnn_box").click(function(){        
         if($(".dtnn_box").hasClass("active")){
             $(".dtnn_box").removeClass("active");
@@ -39,16 +55,5 @@ $(document).ready(function(){
 			$(".dtn_checked").css("display","block");
 		}
 	});
-
-	$(".dtn_rcmd").click(function(){        
-        if($("this").hasClass("active")){
-            $("this").removeClass("active");
-			$("this ul li p").removeClass("active");
-			$("this .rdtn_checked").css("display","none");
-        } else{
-            $("this").addClass("active");
-			$("this ul li p").addClass("active");
-			$("this .rdtn_checked").css("display","block");
-		}
-	});
+	*/
 });
