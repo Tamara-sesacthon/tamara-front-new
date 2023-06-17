@@ -94,23 +94,23 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="c_stop station_modal_open">
+                    <div class="c_stop">
                         <span class="btn_prev" id="BtnPrev"><img src="image/prev_arrow.png" alt="BtnPrev"></span>
 				        <span class="btn_next" id="BtnNext"><img src="image/next_arrow.png" alt="BtnNext"></span>
                         <div class="stop_info_slider">
-                            <div class="items">
+                            <div class="items station_modal_open">
                                 <div class="items_content">
                                     <h2>정류장 이름</h2>
                                     <p>정류장 번호</p>
                                 </div>
                             </div>
-                            <div class="items">
+                            <div class="items station_modal_open">
                                 <div class="items_content">
                                     <h2>정류장 이름</h2>
                                     <p>정류장 번호</p>
                                 </div>
                             </div>
-                            <div class="items">
+                            <div class="items station_modal_open">
                                 <div class="items_content">
                                     <h2>정류장 이름</h2>
                                     <p>정류장 번호</p>
@@ -170,10 +170,12 @@
             <div class="inner">
                 <h2>어디로 가시나요?</h2>
                 <div class="wtg_search">
-                    <form action="">
-                        <input type="text" id="" name="" maxlength="16" class="form_w90" placeholder="장소를 입력해주세요.">
-                        <span><img src="image/search_icon.png" alt="목적지 검색"></span>
-                    </form>
+                    <div class="formtag_area">
+                        <form action="">
+                            <input type="text" id="" name="" maxlength="16" class="form_w100" placeholder="장소를 입력해주세요.">
+                        </form>
+                    </div>
+                    <span><img src="image/search_icon.png" alt="목적지 검색"></span>
                 </div>
             </div>
         </div>
@@ -191,13 +193,13 @@
             </div>
             <div class="buttons">
                 <button class="d_confirm">맞아요, 가는 버스를 알려주세요</button>
-                <button class="d_relation" onclick="location.href='../buslist/buslist.html'">연관된 모든 곳을 보여주세요</button>
+                <button class="d_relation" onclick="location.href='html/buslist/buslist.html'">연관된 모든 곳을 보여주세요</button>
             </div>
             <div class="dtn_now">
                 <h2>현재 목적지</h2>
                 <div class="dtnn_box active">
                     <p class="active">종로구 창경궁로 88</p>
-                    <p class="selected_dtn active">광장시장</p>
+                    <span class="selected_title_wrap"><p class="selected_dtn active">광장시장</p></span>
                     <p class="active">시장</p>
                     <span class="selected_flag"><img src="image/active_flag_icon.png" alt="선택 아이콘"></span>
                 </div>
@@ -207,31 +209,31 @@
                 <ul>
                     <li>
                         <p>서울 중구 남대문시장4길 21</p>
-                        <p class="selected_rdtn">남대문시장</p>
+                        <span class="selected_title_wrap"><p class="selected_rdtn">남대문시장</p></span>
                         <p>시장</p>
                         <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
                     <li>
                         <p>종로6가 270-3</p>
-                        <p class="selected_rdtn">동대문종합시장</p>
+                        <span class="selected_title_wrap"><p class="selected_rdtn">동대문종합시장</p></span>
                         <p>시장</p>
                         <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
                     <li>
                         <p>동작구 노들로 674</p>
-                        <p class="selected_rdtn">노량진수산물도매시장</p>
+                        <span class="selected_title_wrap"><p class="selected_rdtn">노량진수산물도매시장</p></span>
                         <p>시장</p>
                         <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
                     <li>
                         <p>송파구 양재대로 932</p>
-                        <p class="selected_rdtn">가락농수산물종합도매시장</p>
+                        <span class="selected_title_wrap"><p class="selected_rdtn">가락농수산물종합도매시장</p></span>
                         <p>시장</p>
                         <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
                     <li>
                         <p>종로구 창경궁로 88</p>
-                        <p class="selected_rdtn">광장시장</p>
+                        <span class="selected_title_wrap"><p class="selected_rdtn">광장시장</p></span>
                         <p>시장</p>
                         <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
                     </li>
