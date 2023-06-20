@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no">
     <title>Document</title>
+
+    <!--Add the CSS-->
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/slick.css" type="text/css">
     <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-
-    <script src="js/jquery-2.1.3.min.js" type="text/javaScript"></script>
-    <script src="js/slick.min.js" type="text/javaScript"></script>
 </head>
 <body>
     <div id="wrap">
@@ -166,87 +165,103 @@
         <!--//est_arrival-->
 
         <!--wheretogo: 어디로 가시나요?-->
-        <div class="wheretogo">
+        <div class="where_to_go">
             <div class="inner">
-                <h2>어디로 가시나요?</h2>
-                <div class="wtg_search">
+                <div class="where_to_go_title_box">
+                    <h2>어디로 가시나요?</h2>
+                    <span class="top_button"><img src="image/topbutton.png" alt="탑버튼"></span>
+                </div>
+                <div class="where_to_go_search">
                     <div class="formtag_area">
                         <form action="">
                             <input type="text" id="" name="" maxlength="16" class="form_w100" placeholder="장소를 입력해주세요.">
                         </form>
                     </div>
-                    <span><img src="image/search_icon.png" alt="목적지 검색"></span>
+                    <span class="searchicon"><img src="image/search_icon.png" alt="목적지 검색"></span>
                 </div>
             </div>
         </div>
         <!--//wheretogo-->
 
-        <div class="map">
-            <p>map</p>
-        </div>
-        <div class="inner">
-            <div class="loca_confirm">
-                <p>가시려는 위치가</p>
-                <p><b class="d_address">종로구 창경궁로 88</b> 에 위치한</p>
-                <p><b class="destination">광장시장</b> (이)라는</p>
-                <p><b class="d_type">시장</b> (이)가 맞나요?</p>
+        <!--keyboard_area : 안드로이드 키보드 영역-->
+        <div class="keyboard_area"></div>
+        <!--//keyboard_area-->
+
+        <div class="take_contents">
+            <!--map-->
+            <div class="map">
+                <p>map</p>
             </div>
-            <div class="buttons">
-                <button class="d_confirm">맞아요, 가는 버스를 알려주세요</button>
-                <button class="d_relation" onclick="location.href='html/buslist/buslist.html'">연관된 모든 곳을 보여주세요</button>
-            </div>
-            <div class="dtn_now">
-                <h2>현재 목적지</h2>
-                <div class="dtnn_box active">
-                    <p class="active">종로구 창경궁로 88</p>
-                    <span class="selected_title_wrap"><p class="selected_dtn active">광장시장</p></span>
-                    <p class="active">시장</p>
-                    <span class="selected_flag"><img src="image/active_flag_icon.png" alt="선택 아이콘"></span>
+            <!--//map-->
+            
+            <div class="inner">
+                <div class="loca_confirm">
+                    <p>가시려는 위치가</p>
+                    <p><b class="d_address">종로구 창경궁로 88</b> 에 위치한</p>
+                    <p><b class="destination">광장시장</b> (이)라는</p>
+                    <p><b class="d_type">시장</b> (이)가 맞나요?</p>
+                </div>
+                <div class="buttons">
+                    <button class="d_confirm">맞아요, 가는 버스를 알려주세요</button>
+                    <button class="d_relation" onclick="location.href='html/buslist/buslist.html'">연관된 모든 곳을 보여주세요</button>
+                </div>
+                <div class="dtn_now">
+                    <h2>현재 목적지</h2>
+                    <div class="dtnn_box active">
+                        <p class="active">종로구 창경궁로 88</p>
+                        <span class="selected_title_wrap"><p class="selected_dtn active">광장시장</p></span>
+                        <p class="active">시장</p>
+                        <span class="selected_flag"><img src="image/active_location_icon.png" alt="선택 아이콘"></span>
+                    </div>
+                </div>
+                <div class="dtn_rcmd">
+                    <h2>혹시 이곳은 아닌가요?</h2>
+                    <ul>
+                        <li>
+                            <p>서울 중구 남대문시장4길 21</p>
+                            <span class="selected_title_wrap"><p class="selected_rdtn">남대문시장</p></span>
+                            <p>시장</p>
+                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                        </li>
+                        <li>
+                            <p>종로6가 270-3</p>
+                            <span class="selected_title_wrap"><p class="selected_rdtn">동대문종합시장</p></span>
+                            <p>시장</p>
+                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                        </li>
+                        <li>
+                            <p>동작구 노들로 674</p>
+                            <span class="selected_title_wrap"><p class="selected_rdtn">노량진수산물도매시장</p></span>
+                            <p>시장</p>
+                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                        </li>
+                        <li>
+                            <p>송파구 양재대로 932</p>
+                            <span class="selected_title_wrap"><p class="selected_rdtn">가락농수산물종합도매시장</p></span>
+                            <p>시장</p>
+                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                        </li>
+                        <li>
+                            <p>종로구 창경궁로 88</p>
+                            <span class="selected_title_wrap"><p class="selected_rdtn">광장시장</p></span>
+                            <p>시장</p>
+                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                        </li>
+                        <div class="more_recommend">
+                            <span><img src="image/more_recommend.png" alt="목록 불러오기"></span>
+                        </div>
+                    </ul>
+                    
                 </div>
             </div>
-            <div class="dtn_rcmd">
-                <h2>혹시 이곳은 아닌가요?</h2>
-                <ul>
-                    <li>
-                        <p>서울 중구 남대문시장4길 21</p>
-                        <span class="selected_title_wrap"><p class="selected_rdtn">남대문시장</p></span>
-                        <p>시장</p>
-                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
-                    </li>
-                    <li>
-                        <p>종로6가 270-3</p>
-                        <span class="selected_title_wrap"><p class="selected_rdtn">동대문종합시장</p></span>
-                        <p>시장</p>
-                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
-                    </li>
-                    <li>
-                        <p>동작구 노들로 674</p>
-                        <span class="selected_title_wrap"><p class="selected_rdtn">노량진수산물도매시장</p></span>
-                        <p>시장</p>
-                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
-                    </li>
-                    <li>
-                        <p>송파구 양재대로 932</p>
-                        <span class="selected_title_wrap"><p class="selected_rdtn">가락농수산물종합도매시장</p></span>
-                        <p>시장</p>
-                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
-                    </li>
-                    <li>
-                        <p>종로구 창경궁로 88</p>
-                        <span class="selected_title_wrap"><p class="selected_rdtn">광장시장</p></span>
-                        <p>시장</p>
-                        <span class="non_selected_flag"><img src="image/flag_icon.png" alt="선택 아이콘"></span>
-                    </li>
-                    <div class="more_recommend">
-                        <span><img src="image/more_recommend.png" alt="목록 불러오기"></span>
-                    </div>
-                </ul>
-                
-            </div>
         </div>
-
+        <div class="footer">
+        </div>
     </div>
 
+    <!--Add the js-->
+    <script src="js/jquery-2.1.3.min.js" type="text/javaScript"></script>
+    <script src="js/slick.min.js" type="text/javaScript"></script>
     <script src="js/slick.1.9.0.min.js" type="text/JavaScript"></script>
 	<script src="js/slick-animation.min.js" type="text/JavaScript"></script>
 	<script src="js/main_script.js" type="text/JavaScript"></script>
