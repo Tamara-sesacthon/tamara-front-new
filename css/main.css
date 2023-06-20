@@ -3,7 +3,7 @@
 .inner{width:90%; margin:0 auto;}
 
 /* est_arrival */
-.bg_est_arrival{padding-top:45px; padding-bottom:20px; background:#111;}
+.bg_est_arrival{padding-top:45px; padding-bottom:20px; background:#111; z-index:999;}
 .est_arrival{height:280px;}
 .est_arrival .inner > h2{font-size:24px; font-weight:500; color:#f8de4b;}
 
@@ -48,12 +48,13 @@
 .c_stop .stop_info_slider .items{display:none;}
 .c_stop .stop_info_slider .items .items_content > h2{font-size:32px; font-weight:500; text-align:center; margin-bottom:20px;} 
 .c_stop .stop_info_slider .items .items_content > p{font-size:16px; text-align:center;}
-.c_stop > span img{width:35px; height:35px;}
 
 /*** arrow ***/
 .c_stop{position:relative;}
 .c_stop .btn_prev,
-.c_stop .btn_next{position:absolute; width:35px; height:35px; top:55%; transform:translateY(-50%); z-index:99; cursor:pointer;}
+.c_stop .btn_next{display:flex; align-items:center; justify-content:center; position:absolute; width:35px; height:120px; top:55%; transform:translateY(-50%); z-index:99; cursor:pointer;}
+.c_stop .btn_prev img,
+.c_stop .btn_next img{width:35px; height:35px;}
 .c_stop .btn_prev{left:3%;}
 .c_stop .btn_next{right:3%;}
 
@@ -70,22 +71,30 @@
 .modal_btn{display:inline-flex; width:49%; height:100%; justify-content:center; align-items:center; float:left; color:#ffffff; cursor:pointer;}
 .modal_btn.confirm{border-right:1px solid #fff;}
 
-/* wheretogo */
-.wheretogo{margin-top:35px; margin-bottom:400px;}
-.wheretogo h2{font-size:21px; font-weight:500; margin-bottom:10px;}
-.wheretogo .wtg_search{display:flex; align-items:center;}
-.wheretogo .wtg_search .formtag_area{width:100%;}
-.wheretogo .wtg_search > span img{margin-left:10px; width:25px; height:auto;}
+/* where_to_go */
+.where_to_go{position:absolute; top: 345px; width:100%; height:150px; background:#fff; padding:35px 0 20px 0; z-index:99;}
+
+.where_to_go .where_to_go_title_box{position:relative; display:flex; align-items:center; justify-content:center; padding-bottom:5px; height:35px;}
+.where_to_go .where_to_go_title_box h2{font-size:21px; font-weight:500; margin-bottom:10px;}
+.where_to_go .where_to_go_title_box .top_button{display:none; margin-bottom:10px;}
+.where_to_go .where_to_go_search{display:flex; align-items:center;}
+.where_to_go .where_to_go_search .formtag_area{width:100%;}
+.where_to_go .where_to_go_search .searchicon img{margin-left:10px; width:25px; height:auto;}
+.addshadow{box-shadow: 5px 10px 10px 1px rgba(0,0,0,.1);}
+
+/* keyboard_area */
+.keyboard_area{width:100%; height:400px;}
 
 /**********************************/
 
+.take_contents{display:none;}
 
 /* location*/
-.map{width:100%; height:160px; background:#f1f1f1; margin-top:0px;}
-.map p{line-height:160px; text-align:center;}
+.map{width:100%; height:250px; background:#f1f1f1; margin-top:150px;}
+.map p{line-height:250px; text-align:center;}
 
 /** loca_confirm(목적지 확인) **/
-.loca_confirm{width:100%; margin-top:20px; text-align:center; padding:10px; border:2px solid #555;}
+.loca_confirm{width:100%; height:auto; margin-top:20px; text-align:center; padding:10px; border:2px solid #555;}
 .loca_confirm p{font-size:18px; margin-bottom:15px;}
 .loca_confirm p:last-child{margin-bottom:0;}
 .loca_confirm b.d_address{font-size:24px; color:#0675b4;}
