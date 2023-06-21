@@ -14,12 +14,12 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="bg_est_arrival">
-            <!--est_arrival:도착 예정 정보-->
-            <div class="est_arrival">
+        <div class="bg_estimated_arrival">
+            <!--estimated_arrival:도착 예정 정보-->
+            <div class="estimated_arrival">
                 <div class="inner">
                     <h2>잠시 후 도착 예정</h2>
-                    <div class="esta_list">
+                    <div class="list_estimated_arrival">
                         <ul>
                             <li class="bus_modal_open">
                                 <div class="bus_profile">
@@ -93,26 +93,26 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="c_stop">
-                        <span class="btn_prev" id="BtnPrev"><img src="image/prev_arrow.png" alt="BtnPrev"></span>
-				        <span class="btn_next" id="BtnNext"><img src="image/next_arrow.png" alt="BtnNext"></span>
-                        <div class="stop_info_slider">
+                    <div class="list_stations">
+                        <span id="btn_prev"><img src="image/prev_arrow.png" alt="이전 버튼"></span>
+				        <span id="btn_next"><img src="image/next_arrow.png" alt="다음 버튼"></span>
+                        <div class="info_stations_slider">
                             <div class="items station_modal_open">
-                                <div class="items_content">
-                                    <h2>정류장 이름</h2>
-                                    <p>정류장 번호</p>
+                                <div class="items_content prev_station">
+                                    <h2>정류장 이름1</h2>
+                                    <p>정류장 번호1</p>
                                 </div>
                             </div>
                             <div class="items station_modal_open">
-                                <div class="items_content">
-                                    <h2>정류장 이름</h2>
-                                    <p>정류장 번호</p>
+                                <div class="items_content current_station">
+                                    <h2>정류장 이름2</h2>
+                                    <p>정류장 번호2</p>
                                 </div>
                             </div>
                             <div class="items station_modal_open">
-                                <div class="items_content">
-                                    <h2>정류장 이름</h2>
-                                    <p>정류장 번호</p>
+                                <div class="items_content next_station">
+                                    <h2>정류장 이름3</h2>
+                                    <p>정류장 번호3</p>
                                 </div>
                             </div>             
                         </div>
@@ -167,11 +167,11 @@
         <!--wheretogo: 어디로 가시나요?-->
         <div class="where_to_go">
             <div class="inner">
-                <div class="where_to_go_title_box">
+                <div class="titlebox_where_to_go">
                     <h2>어디로 가시나요?</h2>
                     <span class="top_button"><img src="image/topbutton.png" alt="탑버튼"></span>
                 </div>
-                <div class="where_to_go_search">
+                <div class="searchingbox_where_to_go">
                     <div class="formtag_area">
                         <form action="">
                             <input type="text" id="" name="" maxlength="16" class="form_w100" placeholder="장소를 입력해주세요.">
@@ -195,57 +195,57 @@
             <!--//map-->
             
             <div class="inner">
-                <div class="loca_confirm">
+                <div class="confirm_destinations">
                     <p>가시려는 위치가</p>
-                    <p><b class="d_address">종로구 창경궁로 88</b> 에 위치한</p>
+                    <p><b class="address_destination">종로구 창경궁로 88</b> 에 위치한</p>
                     <p><b class="destination">광장시장</b> (이)라는</p>
-                    <p><b class="d_type">시장</b> (이)가 맞나요?</p>
+                    <p><b class="type_destination">시장</b> (이)가 맞나요?</p>
                 </div>
                 <div class="buttons">
-                    <button class="d_confirm">맞아요, 가는 버스를 알려주세요</button>
-                    <button class="d_relation" onclick="location.href='html/buslist/buslist.html'">연관된 모든 곳을 보여주세요</button>
+                    <button class="btn_confirm">맞아요, 가는 버스를 알려주세요</button>
+                    <button class="btn_relation" onclick="location.href='html/buslist/buslist.html'">연관된 모든 곳을 보여주세요</button>
                 </div>
-                <div class="dtn_now">
+                <div class="current_destination">
                     <h2>현재 목적지</h2>
-                    <div class="dtnn_box active">
+                    <div class="box_current_destination active">
                         <p class="active">종로구 창경궁로 88</p>
                         <span class="selected_title_wrap"><p class="selected_dtn active">광장시장</p></span>
                         <p class="active">시장</p>
-                        <span class="selected_flag"><img src="image/active_location_icon.png" alt="선택 아이콘"></span>
+                        <span class="selected_icon"><img src="image/active_location_icon.png" alt="선택 아이콘"></span>
                     </div>
                 </div>
-                <div class="dtn_rcmd">
+                <div class="recommend_destination">
                     <h2>혹시 이곳은 아닌가요?</h2>
                     <ul>
                         <li>
                             <p>서울 중구 남대문시장4길 21</p>
-                            <span class="selected_title_wrap"><p class="selected_rdtn">남대문시장</p></span>
+                            <span class="selected_title_wrap"><p class="selected_rec_destination">남대문시장</p></span>
                             <p>시장</p>
-                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                            <span class="non_selected_icon"><img src="image/location_icon.png" alt="선택 아이콘"></span>
                         </li>
                         <li>
                             <p>종로6가 270-3</p>
-                            <span class="selected_title_wrap"><p class="selected_rdtn">동대문종합시장</p></span>
+                            <span class="selected_title_wrap"><p class="selected_rec_destination">동대문종합시장</p></span>
                             <p>시장</p>
-                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                            <span class="non_selected_icon"><img src="image/location_icon.png" alt="선택 아이콘"></span>
                         </li>
                         <li>
                             <p>동작구 노들로 674</p>
-                            <span class="selected_title_wrap"><p class="selected_rdtn">노량진수산물도매시장</p></span>
+                            <span class="selected_title_wrap"><p class="selected_rec_destination">노량진수산물도매시장</p></span>
                             <p>시장</p>
-                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                            <span class="non_selected_icon"><img src="image/location_icon.png" alt="선택 아이콘"></span>
                         </li>
                         <li>
                             <p>송파구 양재대로 932</p>
-                            <span class="selected_title_wrap"><p class="selected_rdtn">가락농수산물종합도매시장</p></span>
+                            <span class="selected_title_wrap"><p class="selected_rec_destination">가락농수산물종합도매시장</p></span>
                             <p>시장</p>
-                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                            <span class="non_selected_icon"><img src="image/location_icon.png" alt="선택 아이콘"></span>
                         </li>
                         <li>
                             <p>종로구 창경궁로 88</p>
-                            <span class="selected_title_wrap"><p class="selected_rdtn">광장시장</p></span>
+                            <span class="selected_title_wrap"><p class="selected_rec_destination">광장시장</p></span>
                             <p>시장</p>
-                            <span class="non_selected_flag"><img src="image/location_icon.png" alt="선택 아이콘"></span>
+                            <span class="non_selected_icon"><img src="image/location_icon.png" alt="선택 아이콘"></span>
                         </li>
                         <div class="more_recommend">
                             <span><img src="image/more_recommend.png" alt="목록 불러오기"></span>
