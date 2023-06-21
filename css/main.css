@@ -2,61 +2,61 @@
 #wrap{position:relative; min-width:320px; max-width:768px; margin:0 auto;}
 .inner{width:90%; margin:0 auto;}
 
-/* est_arrival */
-.bg_est_arrival{padding-top:45px; padding-bottom:20px; background:#111; z-index:999;}
-.est_arrival{height:280px;}
-.est_arrival .inner > h2{font-size:24px; font-weight:500; color:#f8de4b;}
+/* estimated_arrival */
+.bg_estimated_arrival{padding-top:45px; padding-bottom:20px; background:#111; z-index:999;}
+.estimated_arrival{height:280px;}
+.estimated_arrival .inner > h2{font-size:24px; font-weight:500; color:#f8de4b;}
 
 /** esta_list **/
-.est_arrival .esta_list{max-width:100%; height:80px; background:#161616; overflow:auto; white-space: nowrap; margin-top:10px; padding:15px;}
-.est_arrival .esta_list ul{line-height:0;}
-.est_arrival .esta_list ul li{display:flex; width:content-max; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
+.estimated_arrival .list_estimated_arrival{max-width:100%; height:80px; background:#161616; overflow:auto; white-space: nowrap; margin-top:10px; padding:15px;}
+.estimated_arrival .list_estimated_arrival ul{line-height:0;}
+.estimated_arrival .list_estimated_arrival ul li{display:flex; width:content-max; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
 	border-radius:15px;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	-o-border-radius:15px;
 }
-.est_arrival .esta_list ul li:last-child{margin-right:0;}
+.estimated_arrival .list_estimated_arrival ul li:last-child{margin-right:0;}
 
-.est_arrival .esta_list ul li{display:inline-block;}
-.est_arrival .esta_list ul li .bus_profile{display:flex; align-items:center;}
+.estimated_arrival .list_estimated_arrival ul li{display:inline-block;}
+.estimated_arrival .list_estimated_arrival ul li .bus_profile{display:flex; align-items:center;}
 .bus_profile .bus_category{width:35px; height:50px; background:#fff; padding-top:6px;}
 .bus_profile .bus_category p{font-size:18px; font-weight:500; color:#888; line-height:35px; letter-spacing:0.5px; writing-mode: vertical-rl;}
 .bus_profile .bus_number{min-width:100px; width:content-max; height:50px; text-align:center;}
 .bus_profile .bus_number p{font-size:32px; font-weight:500; color:#fff; line-height:50px; margin:0 10px;}
 
-.est_arrival .esta_list ul li:nth-child(1) .bus_profile .bus_number{background:#85664f;}
-.est_arrival .esta_list ul li:nth-child(2) .bus_profile .bus_number{background:#ca492c;}
-.est_arrival .esta_list ul li:nth-child(3) .bus_profile .bus_number{background:#5c6dec;}
-.est_arrival .esta_list ul li:nth-child(4) .bus_profile .bus_number{background:#5b9c34;}
-.est_arrival .esta_list ul li:nth-child(5) .bus_profile .bus_number{background:#b19036;}
-.est_arrival .esta_list ul li:nth-child(6) .bus_profile .bus_number{background:#4f70ba;}
-.est_arrival .esta_list ul li:nth-child(7) .bus_profile .bus_number{background:#5a9c34;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(1) .bus_profile .bus_number{background:#85664f;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(2) .bus_profile .bus_number{background:#ca492c;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(3) .bus_profile .bus_number{background:#5c6dec;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(4) .bus_profile .bus_number{background:#5b9c34;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(5) .bus_profile .bus_number{background:#b19036;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(6) .bus_profile .bus_number{background:#4f70ba;}
+.estimated_arrival .list_estimated_arrival ul li:nth-child(7) .bus_profile .bus_number{background:#5a9c34;}
 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
-.est_arrival .esta_list::-webkit-scrollbar {display: none;}
+.estimated_arrival .list_estimated_arrival::-webkit-scrollbar {display: none;}
 /* 인터넷 익스플로러 / 파이어폭스 */  
-.est_arrival .esta_list{-ms-overflow-style: none;  scrollbar-width: none;}
+.estimated_arrival .list_estimated_arrival{-ms-overflow-style: none;  scrollbar-width: none;}
 
 /** c_stop **/
-.c_stop .stop_info_slider .items .items_content{display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:120px; border:2px solid #555555; background:#fff; padding:15px; margin-top:15px;
+.list_stations .info_stations_slider .items .items_content{display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:120px; border:2px solid #555555; background:#fff; padding:15px; margin-top:15px;
 	border-radius:15px;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	-o-border-radius:15px;
 }
-.c_stop .stop_info_slider .items{display:none;}
-.c_stop .stop_info_slider .items .items_content > h2{font-size:32px; font-weight:500; text-align:center; margin-bottom:20px;} 
-.c_stop .stop_info_slider .items .items_content > p{font-size:16px; text-align:center;}
+.list_stations .info_stations_slider .items{display:none;}
+.list_stations .info_stations_slider .items .items_content > h2{font-size:32px; font-weight:500; text-align:center; margin-bottom:20px;} 
+.list_stations .info_stations_slider .items .items_content > p{font-size:16px; text-align:center;}
 
 /*** arrow ***/
-.c_stop{position:relative;}
-.c_stop .btn_prev,
-.c_stop .btn_next{display:flex; align-items:center; justify-content:center; position:absolute; width:35px; height:120px; top:55%; transform:translateY(-50%); z-index:99; cursor:pointer;}
-.c_stop .btn_prev img,
-.c_stop .btn_next img{width:35px; height:35px;}
-.c_stop .btn_prev{left:3%;}
-.c_stop .btn_next{right:3%;}
+.list_stations{position:relative;}
+.list_stations #btn_prev,
+.list_stations #btn_next{display:flex; align-items:center; justify-content:center; position:absolute; width:35px; height:120px; top:55%; transform:translateY(-50%); z-index:99; cursor:pointer;}
+.list_stations #btn_prev img,
+.list_stations #btn_next img{width:35px; height:35px;}
+.list_stations #btn_prev{left:3%;}
+.list_stations #btn_next{right:3%;}
 
 /** modal **/
 .modal_wrap{width:100%; height:100%; background-color:rgba(0,0,0,.3); justify-content:center; align-items:center; position:fixed; top:0; left:0; display:none; z-index:999;}
@@ -74,12 +74,12 @@
 /* where_to_go */
 .where_to_go{position:absolute; top: 345px; width:100%; height:150px; background:#fff; padding:35px 0 20px 0; z-index:99;}
 
-.where_to_go .where_to_go_title_box{position:relative; display:flex; align-items:center; justify-content:center; padding-bottom:5px; height:35px;}
-.where_to_go .where_to_go_title_box h2{font-size:21px; font-weight:500; margin-bottom:10px;}
-.where_to_go .where_to_go_title_box .top_button{display:none; margin-bottom:10px;}
-.where_to_go .where_to_go_search{display:flex; align-items:center;}
-.where_to_go .where_to_go_search .formtag_area{width:100%;}
-.where_to_go .where_to_go_search .searchicon img{margin-left:10px; width:25px; height:auto;}
+.where_to_go .titlebox_where_to_go{position:relative; display:flex; align-items:center; justify-content:center; padding-bottom:5px; height:35px;}
+.where_to_go .titlebox_where_to_go h2{font-size:21px; font-weight:500; margin-bottom:10px;}
+.where_to_go .titlebox_where_to_go .top_button{display:none; margin-bottom:10px;}
+.where_to_go .searchingbox_where_to_go{display:flex; align-items:center;}
+.where_to_go .searchingbox_where_to_go .formtag_area{width:100%;}
+.where_to_go .searchingbox_where_to_go .searchicon img{margin-left:10px; width:25px; height:auto;}
 .addshadow{box-shadow: 5px 10px 10px 1px rgba(0,0,0,.1);}
 
 /* keyboard_area */
@@ -93,59 +93,59 @@
 .map{width:100%; height:250px; background:#f1f1f1; margin-top:150px;}
 .map p{line-height:250px; text-align:center;}
 
-/** loca_confirm(목적지 확인) **/
-.loca_confirm{width:100%; height:auto; margin-top:20px; text-align:center; padding:10px; border:2px solid #555;}
-.loca_confirm p{font-size:18px; margin-bottom:15px;}
-.loca_confirm p:last-child{margin-bottom:0;}
-.loca_confirm b.d_address{font-size:24px; color:#0675b4;}
-.loca_confirm b.destination{font-size:30px; color:#0675b4;}
-.loca_confirm b.d_type{font-size:24px; color:#0675b4;}
+/** confirm_destinations(목적지 확인) **/
+.confirm_destinations{width:100%; height:auto; margin-top:20px; text-align:center; padding:10px; border:2px solid #555;}
+.confirm_destinations p{font-size:18px; margin-bottom:15px;}
+.confirm_destinations p:last-child{margin-bottom:0;}
+.confirm_destinations b.address_destination{font-size:24px; color:#0675b4;}
+.confirm_destinations b.destination{font-size:30px; color:#0675b4;}
+.confirm_destinations b.type_destination{font-size:24px; color:#0675b4;}
 
 /** buttons(버튼) **/
-.buttons .d_confirm,
-.buttons .d_relation{width:100%; height:60px; font-size:18px; text-align:center; line-height:60px; margin-top:15px; cursor:pointer; 
+.buttons .btn_confirm,
+.buttons .btn_relation{width:100%; height:60px; font-size:18px; text-align:center; line-height:60px; margin-top:15px; cursor:pointer; 
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -o-border-radius:10px;}
-.buttons .d_confirm{background:#0675b4; font-weight:500; color:#fff;}
-.buttons .d_relation{border:1px solid #808080; color:#808080;}
+.buttons .btn_confirm{background:#0675b4; font-weight:500; color:#fff;}
+.buttons .btn_relation{border:1px solid #808080; color:#808080;}
 
-/** dtn_now(현재 목적지) **/
-.dtn_now{margin-top:30px;}
-.dtn_now h2{font-size:24px; font-weight:500;}
-.dtn_now .dtnn_box{position:relative; width:100%; height:160px; border:1px solid #0675b4; background:#aaa; margin-top:10px; padding:15px;
+/** current_destination(현재 목적지) **/
+.current_destination{margin-top:30px;}
+.current_destination h2{font-size:24px; font-weight:500;}
+.current_destination .box_current_destination{position:relative; width:100%; height:160px; border:1px solid #0675b4; background:#aaa; margin-top:10px; padding:15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -o-border-radius:10px;}
-.dtn_now .dtnn_box p{font-size:18px; color:#222;}
-.dtn_now .dtnn_box .selected_dtn{font-size:24px; font-weight:500;}
+.current_destination .box_current_destination p{font-size:18px; color:#222;}
+.current_destination .box_current_destination .selected_dtn{font-size:24px; font-weight:500;}
 
-.dtn_now .dtnn_box .selected_flag,
-.dtn_now .dtnn_box .non_selected_flag{position:absolute; right:15px; bottom:15px;}
+.current_destination .box_current_destination .selected_icon,
+.current_destination .box_current_destination .non_selected_icon{position:absolute; right:15px; bottom:15px;}
 
 .active{border-color:#aaa !important; color:#888 !important;}
 
-/** dtn_rcmd(목적지 추천) **/
-.dtn_rcmd{margin-top:30px;}
-.dtn_rcmd h2{font-size:24px; font-weight:500;}
-.dtn_rcmd ul{height:500px; margin-top:10px;}
-.dtn_rcmd ul li{position:relative; width:100%; height:160px; border:1px solid #0675b4; margin-bottom:15px; padding:15px;
+/** recommend_destination(목적지 추천) **/
+.recommend_destination{margin-top:30px;}
+.recommend_destination h2{font-size:24px; font-weight:500;}
+.recommend_destination ul{height:500px; margin-top:10px;}
+.recommend_destination ul li{position:relative; width:100%; height:160px; border:1px solid #0675b4; margin-bottom:15px; padding:15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -o-border-radius:10px;}
 
-.dtn_rcmd ul li p{font-size:18px; color:#0675b4;}
+.recommend_destination ul li p{font-size:18px; color:#0675b4;}
 .selected_title_wrap{display:block; word-wrap:break-word;}
-.dtn_rcmd ul li .selected_title_wrap .selected_rdtn{font-size:24px; font-weight:500;}
-.dtn_rcmd ul li .non_selected_flag{position:absolute; right:15px; bottom:15px;}
+.recommend_destination ul li .selected_title_wrap .selected_rec_destination{font-size:24px; font-weight:500;}
+.recommend_destination ul li .non_selected_icon{position:absolute; right:15px; bottom:15px;}
 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
-.dtn_rcmd ul::-webkit-scrollbar {display: none;}
+.recommend_destination ul::-webkit-scrollbar {display: none;}
 /* 인터넷 익스플로러 / 파이어폭스 */  
-.dtn_rcmd ul{-ms-overflow-style: none;  scrollbar-width: none;}
+.recommend_destination ul{-ms-overflow-style: none;  scrollbar-width: none;}
 
 
 /** more_recommend(목록 불러오기 탭) **/
