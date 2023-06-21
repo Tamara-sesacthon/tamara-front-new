@@ -57,18 +57,33 @@ $(document).ready(function(){
 		$(".top_button").css('display','none');
 	  });
 
-	//stop_info_slider
-	$(".stop_info_slider").slick({
+	//스크롤 가장 상단에 있을 때  
+	function detectTop(){
+		var scrollTop = $(window).scrollTop();
+		if (scrollTop == 0) {
+			$(".where_to_go_title_box h2").css('display','block');
+			$(".top_button").css('display','none');
+		} else {
+			$(".where_to_go_title_box h2").css('display','none');
+			$(".top_button").css('display','block');
+		}
+	}
+
+	//info_stations_slider
+	$(".info_stations_slider").slick({
 		autoplay:false,
-		infinite: true,
+		infinite:false,
 		slidesToShow:1,
 		dots:false,
 		arrows:true,
 		speed:500,
-		prevArrow:$("#BtnPrev"),
-		nextArrow:$("#BtnNext"),
-		focusOnSelect:false,
+		centerMode:true,
+		centerPadding:'0px',
+		prevArrow:$("#btn_prev"),
+		nextArrow:$("#btn_next"),
+		focusOnSelect:true,
 		variableWidth:false,
+		initialSlide : 1,
 	});
 
 	//common_modal
@@ -98,18 +113,4 @@ $(document).ready(function(){
 		modalClose(); 
 	});
 
-	/* search.html */
-	/*
-	$(".dtnn_box").click(function(){        
-        if($(".dtnn_box").hasClass("active")){
-            $(".dtnn_box").removeClass("active");
-			$(".dtnn_box p").removeClass("active");
-			$(".dtn_checked").css("display","none");
-        } else{
-            $(".dtnn_box").addClass("active");
-			$(".dtnn_box p").addClass("active");
-			$(".dtn_checked").css("display","block");
-		}
-	});
-	*/
 });
