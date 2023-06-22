@@ -2,64 +2,80 @@
 #wrap{position:relative; min-width:320px; max-width:768px; margin:0 auto;}
 .inner{width:90%; margin:0 auto;}
 
-/* buslist.html */
-    
-/** fixed_destination(확정 목적지) **/
+/* bus_list.html */
+
+/** fixed_desitination : 확정된 목적지 **/
 .box_fixed_destination{position:relative; width:100%; height:160px; border:1px solid #aaa; margin-top:50px; padding:15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
-    -o-border-radius:10px;}
+    -o-border-radius:10px;
+}
+
 .box_fixed_destination .fixed_address{font-size:18px; color:#111;}
 .box_fixed_destination .fixed_destination_name{font-size:32px; font-weight:500; color:#111;}
 .box_fixed_destination .fixed_category{color:#aaa;}
 .box_fixed_destination .selected_icon{position:absolute; top:15px; right:15px;}
 
-/*** list_buses ***/
+
+/** list_buses : 목적지로 가는 버스 목록 **/
 .list_buses{width:100%; margin-top:20px;}
 .list_buses h2{font-size:24px; font-weight:500;}
-.transfer_information{display:flex; align-items:center;}
-.transfer_information .total_walking_time{margin-right:15px;}
 
-/*** list_buses : faster_buses ***/
-.faster_buses,
-.comfortable_buses,
-.recommend_bus{border-bottom:3px solid #888;}
-.faster_buses{margin-top:15px;}
-.comfortable_buses{margin-top:25px;}
-
+/*** 공통 css 요소 ***/
+/**** 기본 폰트 크기 ****/
 .faster_buses > p,
 .comfortable_buses > p,
 .transfer_information > p{font-size:21px;}
-.comfortable_buses > p b{font-weight:500;}
 
+/**** 버스 목록 박스 ****/
 .fast_bus,
 .comfortable_bus,
-.recommend_bus{display:flex; align-items:center; max-width:100%; height:80px; background:#f2f2f2; overflow:auto; white-space:nowrap; margin-top:15px; padding:10px;}
+.recommend_bus{display:flex; align-items:center; max-width:100%; height:80px; background:#f2f2f2; border-bottom:3px solid #888; overflow:auto; white-space:nowrap; margin-top:15px; padding:10px;}
 
+/**** 도보 시간 및 환승 횟수 ****/
+.transfer_information{display:flex; align-items:center;}
+.transfer_information .total_walking_time{margin-right:15px;}
+
+/**** 도보 시간 및 환승 폰트 크기 ****/
+.transfer_information .total_walking_time > b{font-weight:500;}
+.transfer_information .number_of_transfer{font-weight:400; color:#0675b4;}
+
+/**** 버스 박스 ****/
 .bus_profile{display:flex; align-items:center; width:content-max; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
 	border-radius:15px;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
-	-o-border-radius:15px;}
+	-o-border-radius:15px;
+}
+
+/**** 버스 종류 ****/
 .bus_profile .bus_category{width:35px; height:50px; background:#fff; padding-top:6px;}
 .bus_profile .bus_category p{font-size:18px; font-weight:500; color:#888; line-height:35px; letter-spacing:0.5px; writing-mode: vertical-rl;}
+
+/**** 버스 번호 ****/
 .bus_profile .bus_number{min-width:100px; width:content-max; height:50px; text-align:center;}
 .bus_profile .bus_number p{font-size:32px; font-weight:500; color:#fff; line-height:50px; margin:0 10px;}
 
-.fast_bus .bus_profile .bus_number{background:#ca492c;}
-.fast_bus .trasfer_bus .bus_number{background:#5a9c34;}
+/**** 환승 탭 arrow 간격 ****/
 .fast_bus > span,
 .recommend_bus > span{margin-right:10px;}
+
+
+/*** faster_buses : 가장 빠르지만 환승이 필요한 버스_최상단 추천 ***/
+.faster_buses{margin-top:15px;}
+
+.fast_bus .bus_profile .bus_number{background:#ca492c;}
+.fast_bus .trasfer_bus .bus_number{background:#5a9c34;}
+
+/*** comfortable_buses : 시간이 걸리지만 환승이 없는 버스_최상단 추천 ***/
+.comfortable_buses{margin-top:25px;}
+.comfortable_buses > p b{font-weight:500;}
+
 .comfortable_buses .bus_profile .bus_number{background:#5c6dec;}
-.recommend_bus .bus_profile .bus_number{background:#888;}
-.recommend_bus .trasfer_bus .bus_number{background:#888;}
 
-/**** 가장 빠른 버스 & 편안한 버스 폰트 크기 정리 ****/
-.transfer_information .total_walking_time > b{font-weight:500;}
-.transfer_information .number_of_transfer{font-weight:400; color:#0675b4;}
 
-/** recommend_buses(기타 버스 리스트) **/
+/** recommend_buses : 추천 버스 **/
 .recommend_buses{margin-top:65px;}
 .recommend_buses h2{font-size:24px; font-weight:500;}
 
@@ -69,12 +85,18 @@
 .recommend_buses ul li p{font-size:18px; color:#222;}
 .recommend_buses ul li .name_r_destination{font-size:32px; font-weight:500;}
 
-/* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
+.recommend_bus .bus_profile .bus_number{background:#888;}
+.recommend_bus .trasfer_bus .bus_number{background:#888;}
+
+
+/** 스크롤 감추기 **/
+/*** 크롬, 사파리, 오페라, 엣지  ***/
 .fast_bus::-webkit-scrollbar,
 .comfortable_bus::-webkit-scrollbar,
 .recommend_buses ul::-webkit-scrollbar,
 .recommend_bus::-webkit-scrollbar{display: none;}
-/* 인터넷 익스플로러 / 파이어폭스 */  
+
+/*** 인터넷 익스플로러, 파이어폭스 ***/  
 .fast_bus::-webkit-scrollbar,
 .comfortable_bus::-webkit-scrollbar,
 .recommend_buses ul::-webkit-scrollbar,
