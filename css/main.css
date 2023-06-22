@@ -7,8 +7,8 @@
 .estimated_arrival{height:280px;}
 .estimated_arrival .inner > h2{font-size:24px; font-weight:500; color:#f8de4b;}
 
-/** esta_list **/
-.estimated_arrival .list_estimated_arrival{max-width:100%; height:80px; background:#161616; overflow:auto; white-space: nowrap; margin-top:10px; padding:15px;}
+/** list_estimated_arrival **/
+.estimated_arrival .list_estimated_arrival{max-width:100%; height:80px; background:#161616; overflow:auto; white-space:nowrap; margin-top:10px; padding:15px;}
 .estimated_arrival .list_estimated_arrival ul{line-height:0;}
 .estimated_arrival .list_estimated_arrival ul li{display:flex; width:content-max; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
 	border-radius:15px;
@@ -74,7 +74,7 @@
 /* where_to_go */
 .where_to_go{position:absolute; top: 345px; width:100%; height:150px; background:#fff; padding:35px 0 20px 0; z-index:99;}
 
-.where_to_go .titlebox_where_to_go{position:relative; display:flex; align-items:center; justify-content:center; padding-bottom:5px; height:35px;}
+.where_to_go .titlebox_where_to_go{position:relative; display:flex; align-items:center; justify-content:center; width:100%; padding-bottom:5px; height:35px;}
 .where_to_go .titlebox_where_to_go h2{font-size:21px; font-weight:500; margin-bottom:10px;}
 .where_to_go .titlebox_where_to_go .top_button{display:none; margin-bottom:10px;}
 .where_to_go .searchingbox_where_to_go{display:flex; align-items:center;}
@@ -114,7 +114,7 @@
 /** current_destination(현재 목적지) **/
 .current_destination{margin-top:30px;}
 .current_destination h2{font-size:24px; font-weight:500;}
-.current_destination .box_current_destination{position:relative; width:100%; height:160px; border:1px solid #0675b4; background:#aaa; margin-top:10px; padding:15px;
+.current_destination .box_current_destination{position:relative; width:100%; height:160px; background:#aaa; margin-top:10px; padding:15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
@@ -138,6 +138,7 @@
     -o-border-radius:10px;}
 
 .recommend_destination ul li p{font-size:18px; color:#0675b4;}
+.recommend_destination ul li .recommend_destination_category{color:#aaa;}
 .selected_title_wrap{display:block; word-wrap:break-word;}
 .recommend_destination ul li .selected_title_wrap .selected_rec_destination{font-size:24px; font-weight:500;}
 .recommend_destination ul li .non_selected_icon{position:absolute; right:15px; bottom:15px;}
