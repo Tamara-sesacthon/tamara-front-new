@@ -16,33 +16,58 @@
 <body>
     <div id="wrap">
         <div class="inner">
-            <button class="search_back" onclick="location.href='../search/search.html'">돌아가기</button>
-            <div class="destination_box">
-                <p>종로구 창경궁로 88</p>
-                <p class="name_destination">광장시장</p>
-                <p>시장</p>
+            <div class="fixed_destination">
+                <div class="box_fixed_destination">
+                    <p class="fixed_address">서울 종로구 창경궁로 88</p>
+                    <p class="fixed_destination_name">광장시장</p>
+                    <p class="fixed_category">시장</p>
+                    <span class="selected_icon"><img src="../../image/fixed_location_icon.png" alt="선택 아이콘"></span>
+                </div>
             </div>
             <div class="list_buses">
-                <h2>이 위치로 가는 버스는</h2>
-                <div class="fast_buses">
-                    <h3>조금 기다려야하지만 쾌적해요</h3>
-                    <div class="fast_bus_list">
-                        <ul>
-                            <li>160</li>
-                            <li>720</li>
-                            <li>6613</li>
-                        </ul>
+                <h2>이 위치로 가는 버스는...</h2>
+                <div class="faster_buses">
+                    <p>가장 빠르지만 환승이 필요해요</p>
+                    <div class="transfer_information">
+                        <p>총 <b>00분</b> 중 도보 <b>00분</b></p>
+                    </div>
+                    <div class="fast_bus">
+                        <div class="bus_profile_wrap">
+                            <div class="bus_profile">
+                                <div class="bus_category">
+                                    <p>공항</p>
+                                </div>
+                                <div class="bus_number">
+                                    <p>6006</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
+                        <div class="bus_profile_wrap">
+                            <div class="bus_profile trasfer_bus">
+                                <div class="bus_category">
+                                    <p>공항</p>
+                                </div>
+                                <div class="bus_number">
+                                    <p>6006</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="comfortable_buses">
-                    <h3>조금 기다려야하지만 쾌적해요</h3>
-                    <div class="comfortable_bus_list">
-                        <ul>
-                            <li>6616</li>
-                            <li>770</li>
-                            <li>구로16</li>
-                            <li>1004</li>
-                        </ul>
+                    <p><b>11분</b> 더 걸리지만 환승이 없어요</p>
+                    <div class="comfortable_bus">
+                        <div class="bus_profile_wrap">
+                            <div class="bus_profile">
+                                <div class="bus_category">
+                                    <p>공항</p>
+                                </div>
+                                <div class="bus_number">
+                                    <p>6006</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
