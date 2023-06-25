@@ -46,8 +46,14 @@
 	-o-border-radius:15px;
 }
 .list_stations .info_stations_slider .items{display:none;}
-.list_stations .info_stations_slider .items .items_content > h2{font-size:32px; font-weight:500; text-align:center; margin-bottom:20px;} 
+.list_stations .info_stations_slider .items .items_content .station_name{width:75%; overflow:auto; white-space:nowrap;}
+.list_stations .info_stations_slider .items .items_content .station_name h2{font-size:32px; font-weight:500; text-align:center; margin-bottom:20px;} 
 .list_stations .info_stations_slider .items .items_content > p{font-size:16px; text-align:center;}
+
+/* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
+.list_stations .info_stations_slider .items .items_content .station_name::-webkit-scrollbar {display: none;}
+/* 인터넷 익스플로러 / 파이어폭스 */  
+.list_stations .info_stations_slider .items .items_content .station_name{-ms-overflow-style: none;  scrollbar-width: none;}
 
 /*** arrow ***/
 .list_stations{position:relative;}
@@ -72,7 +78,7 @@
 .modal_btn.confirm{border-right:1px solid #fff;}
 
 /* where_to_go */
-.where_to_go{position:absolute; top: 345px; width:100%; height:150px; background:#fff; padding:35px 0 20px 0; z-index:99;}
+.where_to_go{position:absolute; top: 345px; width:100%; max-width:768px; height:150px; background:#fff; padding:35px 0 20px 0; z-index:99;}
 
 .where_to_go .titlebox_where_to_go{position:relative; display:flex; align-items:center; justify-content:center; width:100%; padding-bottom:5px; height:35px;}
 .where_to_go .titlebox_where_to_go h2{font-size:21px; font-weight:500; margin-bottom:10px;}
