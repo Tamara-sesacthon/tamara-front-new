@@ -1,25 +1,40 @@
 $(document).ready(function(){
 	/* index.html */
 
-	//scroll action
-	$(function(){
-		var scrollTop = $(window).scrollTop();
-		   $('.searchicon').click(function(){
-			   var captionTop = $('.where_to_go').offset().top;
-			   $('html, body').animate({scrollTop : captionTop}, 500);
-			   $(".keyboard_area").css('display','none');
-			   $(".take_contents").css('display','block');
-			   $(".where_to_go").addClass('addshadow');
-			   $(".titlebox_where_to_go > h2").css('display','none');
-			   $(".top_button").css('display','block');
-			   return false;
-			});
-	   });
+	//함수 정의
+	function showTopbtn(){
+		$(".titlebox_where_to_go > h2").css('display','none');
+		$(".top_button").css('display','block');
+	}
 
-	   $(".form_w100").click(function(){
-		window.scrollTo({top : 0, behavior: 'smooth'}); 
+	function removeTopbtn(){
 		$(".titlebox_where_to_go > h2").css('display','block');
 		$(".top_button").css('display','none');
+	}
+
+	function makeBararea(){
+		$(".keyboard_area").css('display','none');
+		$(".take_contents").css('display','block');
+		$(".where_to_go").addClass('addshadow');
+	}
+	var scrollTop = $(window).scrollTop();
+
+	// 클릭시 
+	$('.searchicon').click(function(){
+		var captionTop = $('.where_to_go').offset().top;
+		$('html, body').animate({scrollTop : captionTop}, 500);
+		makeBararea();
+		showTopbtn();
+		return false;
+	 });
+
+
+	   $(".form_w100").click(function(){
+		var captionTop = $('.where_to_go').offset().top;
+		$('html, body').animate({scrollTop : captionTop}, 500);
+		makeBararea();
+		showTopbtn();
+		return false;
 	  });
 
 	   //스크롤 시 fixed
@@ -65,11 +80,9 @@ $(document).ready(function(){
 	function detectTop(){
 		var scrollTop = $(window).scrollTop();
 		if (scrollTop == 0) {
-			$(".titlebox_where_to_go > h2").css('display','block');
-			$(".top_button").css('display','none');
+			showTopbtn();
 		} else {
-			$(".where_to_go_title_box > h2").css('display','none');
-			$(".top_button").css('display','block');
+			removeTopbtn();
 		}
 	};
 
@@ -88,6 +101,7 @@ $(document).ready(function(){
 		focusOnSelect:true,
 		variableWidth:false,
 		initialSlide : 1,
+		swipe:false,
 	});
 
 	//common_modal
