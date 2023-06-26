@@ -131,4 +131,16 @@ $(document).ready(function(){
 		modalClose(); 
 	});
 
+	//modal_station_slider
+	$(".modal_station_slider").slick({
+		autoplay:false,
+		infinite:false,
+		slidesToShow:1,
+		dots:false,
+		arrows:false,
+		speed:500,
+		variableWidth:false,
+		
+	});
+
 });
