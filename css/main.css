@@ -22,7 +22,7 @@
 .estimated_arrival .list_estimated_arrival ul li .bus_profile{display:flex; align-items:center;}
 .bus_profile .bus_category{width:35px; height:50px; background:#fff; padding-top:6px;}
 .bus_profile .bus_category p{font-size:18px; font-weight:500; color:#888; line-height:35px; letter-spacing:0.5px; writing-mode: vertical-rl;}
-.bus_profile .bus_number{min-width:100px; width:content-max; height:50px; text-align:center;}
+.bus_profile .bus_number{min-width:100px; width:content-max; height:50px; text-align:center; background:#aaa;}
 .bus_profile .bus_number p{font-size:32px; font-weight:500; color:#fff; line-height:50px; margin:0 10px;}
 
 .estimated_arrival .list_estimated_arrival ul li:nth-child(1) .bus_profile .bus_number{background:#85664f;}
@@ -74,8 +74,38 @@
 .body_titlebox h1{font-size:24px; font-weight:500;}
 .body_contentbox{word-break:break-word; overflow-y:auto; min-height:100px; max-height:150px;}
 .modal_foot{width:100%; height:50px;}
-.modal_btn{display:inline-flex; width:49%; height:100%; justify-content:center; align-items:center; float:left; color:#ffffff; cursor:pointer;}
-.modal_btn.confirm{border-right:1px solid #fff;}
+.modal_btn{display:flex; width:100%; height:100%; justify-content:center; align-items:center; color:#ffffff; cursor:pointer;}
+
+/*** bus modal detail ***/
+.bus_information{display:flex; align-items:center; justify-content:center;}
+.bus_information > span{display:inline-block; width:50px; height:30px; line-height:30px; background:#888; color:#fff; font-size:18px; font-weight:400; margin-right:10px;
+    border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+}
+
+.bus_details{display:flex; align-items:center; margin-top:50px;}
+
+.bus_details .bus_congestion img{width:40px; height:40px;}
+
+.bus_details .bus_congestion p,
+.bus_details .bus_barrierfree p{font-size:18px; font-weight:400; text-align:center;}
+
+
+
+/*** station modal detail ***/
+.modal_station_slider .items{display:none;}
+.modal_station_slider .items ul li{display:flex; align-items:center; margin-bottom:25px;}
+.modal_station_slider .items ul li:last-child{margin-bottom:0;}
+
+.modal_station_slider .items ul li .bus_profile{max-width:100%; margin-right:15px; border:1px solid #aaa;} /*유형 색상에 따라 border 색상 변경*/
+
+
+.modal_station_slider .items ul li .arrival_informations p{font-size:18px;}
+.modal_station_slider .items ul li .arrival_informations .total_walking_time > b{font-weight:500; color:#0675b4;}
+.modal_station_slider .items ul li .arrival_informations .destination_name{font-size:21px; font-weight:500;}
+
 
 /* where_to_go */
 .where_to_go{position:absolute; top: 345px; width:100%; max-width:768px; height:150px; background:#fff; padding:35px 0 20px 0; z-index:99;}
