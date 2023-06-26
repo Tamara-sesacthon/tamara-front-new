@@ -131,16 +131,35 @@
                             <div class="modal_body">
                                 <div class="body_content">
                                     <div class="body_titlebox">
-                                        <h1>버스 번호</h1>
+                                        <div class="bus_information">
+                                            <span>유형</span>
+                                            <h1>버스 번호</h1>
+                                        </div>
+                                        <p>차량 번호</p>
                                     </div>
                                     <div class="body_contentbox">
-                                        <p>내용</p>
+                                        <div class="bus_details">
+                                            <div class="bus_congestion">
+                                                <p>혼잡도</p>
+                                            </div>
+                                            <div class="bus_congestion_state">
+                                                <img src="image/congestion1_icon.png" alt="쾌적">
+                                                <img src="image/congestion2_icon.png" alt="보통">
+                                                <img src="image/congestion3_icon.png" alt="혼잡">
+                                            </div>
+                                            <div class="bus_barrierfree">
+                                                <p>저상버스 여부</p>
+                                            </div>
+                                            <div class="bus_congestion_state">
+                                                <img src="image/accessible_icon.png" alt="저상버스">
+                                                <img src="image/nonaccessible_icon.png" alt="비저상버스">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal_foot">
                                 <span class="modal_btn confirm" id="bus_confirm">확인</span>
-                                <span class="modal_btn refresh" id="bus_refresh">새로고침</span>
                             </div>
                         </div>
                     </div>
@@ -151,11 +170,127 @@
                             </div>
                             <div class="modal_body">
                                 <div class="body_content">
-                                    <div class="body_titlebox">
-                                        <h1>정류장 이름</h1>
-                                    </div>
-                                    <div class="body_contentbox">
-                                        <p>내용</p>
+                                    <div class="modal_station_slider">
+                                        <div class="items">
+                                            <ul>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="items">
+                                            <ul>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bus_profile">
+                                                        <div class="bus_category">
+                                                            <p>유형</p>
+                                                        </div>
+                                                        <div class="bus_number">
+                                                            <p>번호</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrival_informations">
+                                                        <p class="total_walking_time"><b>00분</b> 후 도착</p>
+                                                        <p class="destination_name">목적지행</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
