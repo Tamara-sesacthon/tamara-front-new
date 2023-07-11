@@ -1,9 +1,51 @@
 @charset "UTF-8";
 
+@media screen and (max-width:414px){
+    /* station_modal : 도착 예정 버스 목록의 정렬을 세로로 변경 */
+    .modal_station_slider .items ul li{flex-direction:column; align-items:flex-start;}
+    .modal_station_slider .items ul li .arrival_informations{margin-top:10px;}
+
+    /* bus_modal : 버스 요약 요소의 높이, 폰트 사이즈, 이미지 크기 축소 */
+    .info_outline{height:80px;}
+
+    .info_outline .bus_category{height:80px;}
+    .info_outline > .bus_category > p{line-height:80px;}
+    .info_outline .bus_number{height:80px;}
+    .info_outline .bus_number p{font-size:28px; line-height:80px;} 
+
+    .info_outline .bus_details{height:80px;}
+    .bus_details .bus_congestion{height:40px;}
+    .bus_details .bus_congestion > span{width:32px; height:32px;}
+
+    .bus_details .bus_statements{height:40px;}
+    .bus_details .bus_statements span{width:32px; height:32px;}
+}
+
+@media screen and (max-width:395px){
+    /* bus_modal : 버스 요약 요소의 유형, 상태 영역의 너비와 이미지 크기 축소 */
+    .info_outline .bus_category{width:35px;}
+    .info_outline > .bus_category > p{line-height:35px; writing-mode:vertical-lr !important; letter-spacing:0.5px !important; margin-top:50%;}
+    .info_outline .bus_number{width:calc(100% - 70px); min-width:150px;}
+
+    .info_outline .bus_details{width:45px;}
+    .bus_details .bus_congestion > span{display:inline-block; width:25px; height:25px;}
+
+    .bus_details .bus_statements span{display:inline-block; width:25px; height:25px;}
+}
+
+@media screen and (max-width:375px){
+    /* bus_modal : 버스 보조 정보의 버튼 너비 축소 */
+    .non_step_bus .explanation > a{width:140px;}
+}
+
 @media screen and (max-width:320px){
-    .c_stop .stop_info h2{font-size:27px; font-weight:500;}
-    .c_stop .stop_info p{font-size:18px;}
- }
+    /* bus_modal : 버스 번호판 영역의 폰트 사이즈 축소 및 추천 버스 목록의 정렬을 세로로 변경 */
+    .bus_info_border > p{font-size:45px;}
+    .bus_info_border > p b{font-size:50px;}
+
+    .recommend_information{flex-direction:column; align-items:flex-start;}
+    .recommend_information > .bus_profile{margin-bottom:10px;}
+}
 
 /************************* sub *************************/
 

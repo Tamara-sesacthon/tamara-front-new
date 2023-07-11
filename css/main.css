@@ -2,15 +2,28 @@
 #wrap{position:relative; min-width:320px; max-width:768px; margin:0 auto;}
 .inner{width:90%; margin:0 auto;}
 
-/* estimated_arrival */
-.bg_estimated_arrival{padding-top:45px; padding-bottom:20px; background:#111; z-index:999;}
+/* 공통 CSS 모음 */
+.style_title{font-size:24px; font-weight:500; font-family:'Noto Sans KR';}
+
+/** 버스 정보 **/
+.bus_profile{display:flex; align-items:center;}
+.bus_category{width:35px; height:50px; background:#fff;}
+.bus_category > p{font-size:18px; font-weight:500; font-family:'Noto Sans KR'; color:#888; writing-mode:vertical-rl; letter-spacing:0.5px; line-height:35px;}
+.bus_number{min-width:100px; width:content-max; height:50px; background:#aaa; text-align:center;}
+.bus_number > p{font-size:32px; font-weight:500; font-family:'Noto Sans KR'; color:#fff; line-height:50px; margin:0 10px;}
+
+/************************************************************/
+
+/* estimated_arrival : 도착 예정 정보 */
+.bg_estimated_arrival{padding:45px 0 20px 0; background:#111; z-index:9999;}
 .estimated_arrival{height:280px;}
-.estimated_arrival .inner > h2{font-size:24px; font-weight:500; color:#f8de4b;}
+
+.estimated_arrival .inner > h2{color:#f8de4b;}
 
 /** list_estimated_arrival **/
 .estimated_arrival .list_estimated_arrival{max-width:100%; height:80px; background:#161616; overflow:auto; white-space:nowrap; margin-top:10px; padding:15px;}
 .estimated_arrival .list_estimated_arrival ul{line-height:0;}
-.estimated_arrival .list_estimated_arrival ul li{display:flex; width:content-max; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
+.estimated_arrival .list_estimated_arrival ul li{display:inline-flex; align-items:center; width:content-max; height:50px; line-height:50px; text-align:center; margin-right:10px; overflow:hidden; cursor:pointer;
 	border-radius:15px;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
@@ -18,37 +31,36 @@
 }
 .estimated_arrival .list_estimated_arrival ul li:last-child{margin-right:0;}
 
-.estimated_arrival .list_estimated_arrival ul li{display:inline-block;}
-.estimated_arrival .list_estimated_arrival ul li .bus_profile{display:flex; align-items:center;}
-.bus_profile .bus_category{width:35px; height:50px; background:#fff; padding-top:6px;}
-.bus_profile .bus_category p{font-size:18px; font-weight:500; color:#888; line-height:35px; letter-spacing:0.5px; writing-mode: vertical-rl;}
-.bus_profile .bus_number{min-width:100px; width:content-max; height:50px; text-align:center; background:#aaa;}
-.bus_profile .bus_number p{font-size:32px; font-weight:500; color:#fff; line-height:50px; margin:0 10px;}
-
-.estimated_arrival .list_estimated_arrival ul li:nth-child(1) .bus_profile .bus_number{background:#85664f;}
-.estimated_arrival .list_estimated_arrival ul li:nth-child(2) .bus_profile .bus_number{background:#ca492c;}
-.estimated_arrival .list_estimated_arrival ul li:nth-child(3) .bus_profile .bus_number{background:#5c6dec;}
-.estimated_arrival .list_estimated_arrival ul li:nth-child(4) .bus_profile .bus_number{background:#5b9c34;}
-.estimated_arrival .list_estimated_arrival ul li:nth-child(5) .bus_profile .bus_number{background:#b19036;}
-.estimated_arrival .list_estimated_arrival ul li:nth-child(6) .bus_profile .bus_number{background:#4f70ba;}
-.estimated_arrival .list_estimated_arrival ul li:nth-child(7) .bus_profile .bus_number{background:#5a9c34;}
+/*** 버스 색상 일람 ***/
+.estimated_arrival .list_estimated_arrival ul li:nth-child(1) .bus_profile .bus_number{background:#85664f;} /* 공항버스 */
+.estimated_arrival .list_estimated_arrival ul li:nth-child(2) .bus_profile .bus_number{background:#ca492c;} /* 광역버스 */
+.estimated_arrival .list_estimated_arrival ul li:nth-child(3) .bus_profile .bus_number{background:#5c6dec;} /* 간선버스 */
+.estimated_arrival .list_estimated_arrival ul li:nth-child(4) .bus_profile .bus_number{background:#5b9c34;} /* 지선버스 */
+.estimated_arrival .list_estimated_arrival ul li:nth-child(5) .bus_profile .bus_number{background:#b19036;} /* 순환버스 */
+.estimated_arrival .list_estimated_arrival ul li:nth-child(6) .bus_profile .bus_number{background:#4f70ba;} /* 심야버스 */
+.estimated_arrival .list_estimated_arrival ul li:nth-child(7) .bus_profile .bus_number{background:#5a9c34;} /* 마을버스 */
 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
 .estimated_arrival .list_estimated_arrival::-webkit-scrollbar {display: none;}
 /* 인터넷 익스플로러 / 파이어폭스 */  
 .estimated_arrival .list_estimated_arrival{-ms-overflow-style: none;  scrollbar-width: none;}
 
-/** c_stop **/
+/** list_stations : 현재 정류장 **/
 .list_stations .info_stations_slider .items .items_content{display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:120px; border:2px solid #555555; background:#fff; padding:15px; margin-top:15px;
 	border-radius:15px;
 	-webkit-border-radius:15px;
 	-moz-border-radius:15px;
 	-o-border-radius:15px;
 }
-.list_stations .info_stations_slider .items{display:none;}
+.list_stations .info_stations_slider .items{display:none;} /* 슬라이더 깜빡이는 오류 방지용 */
 .list_stations .info_stations_slider .items .items_content .station_name{width:75%; overflow:auto; white-space:nowrap;}
-.list_stations .info_stations_slider .items .items_content .station_name h2{font-size:32px; font-weight:500; text-align:center; margin-bottom:20px; line-height:32px;} 
-.list_stations .info_stations_slider .items .items_content > p{font-size:16px; text-align:center;}
+.list_stations .info_stations_slider .items .items_content .station_name > h3{font-size:32px; font-weight:500; text-align:center;} 
+.list_stations .info_stations_slider .items .items_content .station_states{width:75%; overflow:auto; white-space:nowrap;}
+.list_stations .info_stations_slider .items .items_content .station_states > h2{font-size:16px; text-align:center;}
+
+/*** 이전/이후 정류장 ***/
+.prev_station h3,
+.next_station h3{color:#0675b4;}
 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
 .list_stations .info_stations_slider .items .items_content .station_name::-webkit-scrollbar {display: none;}
@@ -66,41 +78,181 @@
 
 /** modal **/
 .modal_wrap{width:100%; height:100%; background-color:rgba(0,0,0,.3); justify-content:center; align-items:center; position:fixed; top:0; left:0; display:none; z-index:999;}
-.modal{width:90%; border-radius:10px; overflow:hidden; background-color:#222; box-shadow: 5px 10px 10px 1px rgba(0,0,0,.3);}
-.modal_head{width:100%; height:50px; display:flex; align-items:center; justify-content:center; font-weight:500; color:#fff; }
-.modal_body{width:100%; background-color:#ffffff;}
-.body_content{width:100%; padding:30px;}
-.body_titlebox{text-align:center; width:100%; height:30px; margin-bottom:10px;}
-.body_titlebox h1{font-size:24px; font-weight:500;}
-.body_contentbox{word-break:break-word; overflow-y:auto; min-height:100px; max-height:150px;}
-.modal_foot{width:100%; height:50px;}
-.modal_btn{display:flex; width:100%; height:100%; justify-content:center; align-items:center; color:#ffffff; cursor:pointer;}
+.modal{position:relative; max-width:690px; width:90%; height:content-max; max-height:550px; border-radius:11px; background-color:#fff; overflow-y:scroll; box-shadow: 5px 10px 10px 1px rgba(0,0,0,.3);}
+.modal_head{position:fixed; max-width:690px; width:90%; text-align:center; height:50px; display:flex; align-items:center; justify-content:center; font-weight:500; color:#fff; background-color:#222; border-radius:10px 10px 0 0; z-index:99;}
+.modal_body{width:100%; background-color:#fff;}
+.body_content{width:100%; height:100%; margin-top:50px;}
+
+/* ( 크롬, 사파리, 오페라, 엣지 ) 스크롤 숨기기 */
+.modal::-webkit-scrollbar {display: none;}
+/* 인터넷 익스플로러 / 파이어폭스 */  
+.modal{-ms-overflow-style: none;  scrollbar-width: none;}
 
 /*** bus modal detail ***/
-.bus_information{display:flex; align-items:center; justify-content:center;}
-.bus_information > span{display:inline-block; width:50px; height:30px; line-height:30px; background:#888; color:#fff; font-size:18px; font-weight:400; margin-right:10px;
-    border-radius:10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	-o-border-radius:10px;
+/**** 버스 정보 개요 ****/
+.body_topbox{width:100%; border-bottom:7px solid #e5e5e5; padding:30px;}
+.body_topbox .info_outline_wrap{width:100%; display:flex; flex-direction:column; align-items:flex-start;}
+.body_topbox .info_outline_wrap > h2{font-size:24px; font-weight:500; margin-bottom:10px;}
+.info_outline{display:flex; align-items:center; width:100%; height:90px; border:1px solid #aaa; overflow:hidden;
+    border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-o-border-radius:15px;
 }
 
-.bus_details{display:flex; align-items:center; margin-top:50px;}
+/**** 세부 정보 ****/
+.sub_information{width:100%;}
+.info_outline .bus_category{width:50px; height:90px;}
+.info_outline > .bus_category > p{font-size:21px; font-weight:500; color:#888; line-height:90px; text-align:center; writing-mode:horizontal-tb !important; letter-spacing:0 !important;}
+.info_outline .bus_number{width:calc(100% - 110px); min-width:175px; height:90px; text-align:center; background:#aaa;}
+.info_outline .bus_number p{font-size:36px; font-weight:500; color:#fff; line-height:90px;}
 
-.bus_details .bus_congestion img{width:40px; height:40px;}
+.info_outline .bus_details{display:flex; flex-direction:column; align-items:center; width:60px; height:90px; background:#aaa;}
 
-.bus_details .bus_congestion p,
-.bus_details .bus_barrierfree p{font-size:18px; font-weight:400; text-align:center;}
+/**** 혼잡도 ****/
+.bus_details .bus_congestion{display:flex; align-items:center; justify-content:center; width:100%; height:45px;}
+.bus_details .bus_congestion > span{display:inline-block; width:35px; height:35px;}
+.bus_details .bus_congestion > span img{width:100%;}
+
+/**** 혼잡도 display 옵션 ****/
+.bus_details .bus_congestion .congestion1_icon{display:none;} /* 쾌적 */
+.bus_details .bus_congestion .congestion2_icon{display:none;} /* 한산 */
+.bus_details .bus_congestion .congestion3_icon{display:none;} /* 혼잡 */
+.bus_details .bus_congestion .congestion4_icon{display:none;} /* 대혼잡 */
+
+/**** 저상버스 여부 ****/
+.bus_details .bus_statements{display:flex; align-items:center; justify-content:center; width:100%; height:45px; background:#aaa;}
+.bus_details .bus_statements span{display:inline-block; width:35px; height:35px;}
+.bus_details .bus_statements span img{width:100%;}
+
+/**** 저상버스 display 옵션 ****/
+.bus_details .bus_statements .accessible{display:none;} /* 저상버스 */
+.bus_details .bus_statements .nonaccessible{display:none;} /* 일반버스(계단) */
+.bus_details .bus_statements .unservice{display:block;} /* 이용 불가 */
 
 
+/**** estimated_and_name ****/
+.body_middlebox{width:100%; border-bottom:7px solid #e5e5e5; display:flex; flex-direction:column; align-items:flex-start; width:100%; padding:30px;}
+.estimated_and_name{width:100%; margin-bottom:20px;}
+
+.bus_estimated > h2{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
+.bus_estimated > h2 b{font-weight:500; color:#0675b4;}
+
+/**** 버스 상태 타이틀 옵션 ****/
+.bus_estimated .estimated_info{display:block;} /* 도착예정시간 정상 안내 */
+.bus_estimated .no_take{display:none;} /* 현재 정류장에서 탈 수 없음 */
+.bus_estimated .no_run{display:none;} /* 운영하지 않음 */
+
+/**** 버스 번호 ****/
+.bus_name{display:flex; align-items:center; justify-content:center; width:100%; height:120px; background:#f8de4b;}
+.bus_info_border{display:flex; flex-direction:column; align-items:center; justify-content:center; width:95%; height:90%; border:2px solid #555;}
+.bus_info_border > p{font-size:50px; font-weight:500; line-height:40px;}
+.bus_info_border > p b{font-size:55px; font-weight:500;}
+.bus_info_border .bus_info_subcontent{display:flex; align-items:center; margin-bottom:15px;}
+.bus_info_border .bus_info_subcontent span{display:inline-block; width:15px; height:15px; border:2px solid #555;
+    border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-o-border-radius:15px;
+}
+.bus_info_border .bus_info_subcontent p{font-size:21px; font-weight:500; margin:0 15px; line-height:15px;}
+
+/**** 저상버스 여부 ****/
+.non_step_bus{display:flex; align-items:center; margin-bottom:15px;}
+.non_step_bus .accessible,
+.non_step_bus .nonaccessible{margin-right:10px;}
+.non_step_bus .accessible,
+.non_step_bus .accessible img,
+.non_step_bus .nonaccessible,
+.non_step_bus .nonaccessible img{width:60px; height:60px;}
+
+.non_step_bus .explanation{padding:0 5px;}
+.non_step_bus .explanation > p{font-size:18px; font-weight:400; margin-bottom:5px;}
+.non_step_bus .explanation > a{display:inline-block; width:200px; height:30px; border:1px solid #0675b4; background:#fff; font-size:15px; font-weight:400; color:#0675b4; line-height:30px; text-align:center; cursor:pointer;}
+
+/**** 저상버스 옵션 ****/
+.non_step_bus .ex_accessible{display:block;}
+.accessible{display:block;}  /* 저상버스 */
+.non_step_bus .ex_nonaccessible{display:none;}
+.nonaccessible{display:none;} /* 일반 버스 */
+
+/**** 혼잡도 ****/
+.congestion{display:flex; align-items:center;}
+.congestion .congestion_icon{margin-right:10px;}
+.congestion .congestion_icon,
+.congestion .congestion_icon img{width:60px; height:60px;}
+.explanation > p{font-size:18px; font-weight:400;}
+
+/**** 혼잡도 옵션 ****/
+.congestion .congestion1_icon{display:block;}
+.congestion .congestion1{display:block;} /* 쾌적 */
+.congestion .congestion2_icon{display:none;}
+.congestion .congestion2{display:none;} /* 한산 */
+.congestion .congestion3_icon{display:none;}
+.congestion .congestion3{display:none;} /* 혼잡 */
+.congestion .congestion4_icon{display:none;}
+.congestion .congestion4{display:none;} /* 대혼잡 */
+
+/**** 첫차/막차 ****/
+.first_and_last_wrap{width:100%; display:flex; justify-content:space-between;}
+.first_station,
+.last_station{width:100%;}
+.first_station{margin-right:20px;}
+.first_station_title,
+.last_station_title{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
+.first_station_box,
+.last_station_box{width:100%; height:90px; border:1px solid #888; background:#aaa; border-radius:15px; font-size:24px; font-weight:400; color:#555; text-align:center; line-height:90px;}
+
+/**** 첫차 막차 중 가까운 것에 active ****/
+.box_active{border:1px solid #0675b4; background:#fff; color:#0675b4; font-weight:500;}
+
+/**** 저상버스,혼잡도 옵션 / 첫차,막차 옵션 ****/
+.non_step_and_congestion{display:block;}
+.first_and_last_wrap{display:none;}
+
+/**** 대신 탈 수 있어요 ****/
+.near_recommend_wrap > h2{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
+.near_recommend_wrap .near_recommend{width:100%; height:90px; border:1px solid #000; border-radius:15px; font-size:24px; font-weight:400; text-align:center; line-height:90px; margin-bottom:10px;}
+.near_recommend_wrap p{font-size:18px; font-weight:400; color:#888;}
+.near_recommend_wrap p b.minute{color:#0675b4; font-weight:500;}
+.near_recommend_wrap p b.distance{font-size:16px; font-weight:400;}
+
+/**** 다시 검색해볼까요? ****/
+.rebrowsing{width:100%;}
+.rebrowsing > h2{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
+.rebrowsing .rebrowsing_box{display:flex; justify-content:space-between; align-items:center; width:100%; height:50px;}
+.rebrowsing .rebrowsing_box .formtag_area{width:100%; margin-right:10px;}
+.rebrowsing .rebrowsing_box span,
+.rebrowsing .rebrowsing_box span img{width:25px;}
+
+/**** display 옵션 ****/
+.near_recommend_wrap{display:none;}/* 여기서 탈 수 있어요 */
+.recommending{display:block;} /* 대신 탈 수 있어요 */
+.rebrowsing{display:none;}/* 다시 검색해볼까요? */
+
+/**** body_bottombox ****/
+.body_bottombox{padding:30px;}
+.recommending .recommend_statement h2{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
+.recommending .recommend_statement .no_replace{display:none;}
+
+.recommend_list ul li{margin-bottom:15px;}
+.recommend_list ul li:last-child{margin-bottom:0;}
+
+.recommend_information{display:flex; align-items:center;}
+.recommend_information .bus_profile{max-width:100%; border:1px solid #aaa;}
+
+.recommend_information .bus_statement .estimated_time{font-size:18px; font-weight:400;}
+.recommend_information .bus_statement .estimated_time b{font-weight:500; color:#0675b4;}
+.recommend_information .bus_statement .bus_for{font-size:16px; font-weight:400; color:#aaa;}
 
 /*** station modal detail ***/
-.modal_station_slider .items{display:none;}
-.modal_station_slider .items ul li{display:flex; align-items:center; margin-bottom:25px;}
-.modal_station_slider .items ul li:last-child{margin-bottom:0;}
+.body_padding{padding:30px;}
+.modal_station_slider .items{display:none;} /* 슬라이더 깜빡이는 오류 방지용 */
+.modal_station_slider .items ul li{display:flex; align-items:center; border-bottom:1px solid #aaa; padding:30px 0;}
+.modal_station_slider .items ul li:first-child{padding:0 0 30px 0;}
+.modal_station_slider .items ul li:last-child{border-bottom:none; padding:30px 0 0 0;}
 
 .modal_station_slider .items ul li .bus_profile{max-width:100%; margin-right:15px; border:1px solid #aaa;} /*유형 색상에 따라 border 색상 변경*/
-
 
 .modal_station_slider .items ul li .arrival_informations p{font-size:18px;}
 .modal_station_slider .items ul li .arrival_informations .total_walking_time > b{font-weight:500; color:#0675b4;}
@@ -123,7 +275,7 @@
 
 /**********************************/
 
-.take_contents{display:none;}
+.take_contents{display:none;} /* 검색창 하단부 */
 
 /* location*/
 .map{width:100%; height:250px; background:#f1f1f1; margin-top:150px;}

@@ -15,67 +15,91 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="inner">
-            <div class="fixed_destination">
+        <div class="buslist_contents">
+            <div class="search inner">
+                <span class="homeicon" onclick="location.href='../../index.html'"><img src="../../image/home_icon.png" alt="돌아가기"></span>
+                <span class="searchicon"><img src="../../image/search_icon.png" alt="목적지 검색"></span>
+            </div>
+            <div class="search_overlay">
+                <div class="search_overlay_content inner">
+                    <div class="formtag_area">
+                        <form action="">
+                            <input type="text" id="" name="" maxlength="16" class="form_w100" placeholder="장소를 입력해주세요.">
+                        </form>
+                    </div>
+                    <span class="searchicon"><img src="../../image/search_icon.png" alt="목적지 검색"></span>
+                </div>
+            </div>
+
+            <!--fixed_destination-->
+            <div class="fixed_destination inner">
                 <div class="box_fixed_destination">
                     <p class="fixed_address">서울 종로구 창경궁로 88</p>
                     <p class="fixed_destination_name">광장시장</p>
                     <p class="fixed_category">시장</p>
-                    <span class="selected_icon"><img src="../../image/fixed_location_icon.png" alt="선택 아이콘"></span>
+                    <span class="selected_icon"><img src="../../image/fixed_location_icon.svg" alt="선택 아이콘"></span>
                 </div>
             </div>
-            <div class="list_buses">
-                <h2>이 위치로 가는 버스는...</h2>
-                <div class="faster_buses">
-                    <p>가장 빠르지만 환승이 필요해요</p>
-                    <div class="transfer_information">
-                        <p class="total_walking_time">총 <b>00분</b> 중 도보 <b>00분</b></p>
-                        <p class="number_of_transfer">환승 1회</p>
-                    </div>
-                    <div class="fast_bus">
-                        <div class="bus_profile_wrap">
-                            <div class="bus_profile">
-                                <div class="bus_category">
-                                    <p>광역</p>
+            <!--//fixed_destination-->
+
+            <!--list_buses-->
+            <div class="list_buses_wrap inner">
+                <div class="list_buses">
+                    <h2>이 위치로 가는 버스는...</h2>
+                    <div class="faster_buses">
+                        <p>가장 빠르지만 환승이 필요해요</p>
+                        <div class="transfer_information">
+                            <p class="total_walking_time">총 <b>00분</b> 중 도보 <b>00분</b></p>
+                            <p class="number_of_transfer">환승 1회</p>
+                        </div>
+                        <div class="fast_bus">
+                            <div class="bus_profile_wrap">
+                                <div class="bus_profile">
+                                    <div class="bus_category">
+                                        <p>광역</p>
+                                    </div>
+                                    <div class="bus_number">
+                                        <p>0000</p>
+                                    </div>
                                 </div>
-                                <div class="bus_number">
-                                    <p>0000</p>
+                            </div>
+                            <span><img src="../../image/arrow.svg" alt="방향 아이콘"></span>
+                            <div class="bus_profile_wrap">
+                                <div class="bus_profile trasfer_bus">
+                                    <div class="bus_category">
+                                        <p>마을</p>
+                                    </div>
+                                    <div class="bus_number">
+                                        <p>99-9</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
-                        <div class="bus_profile_wrap">
-                            <div class="bus_profile trasfer_bus">
-                                <div class="bus_category">
-                                    <p>마을</p>
-                                </div>
-                                <div class="bus_number">
-                                    <p>99-9</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="comfortable_buses">
+                        <p><b>11분</b> 더 걸리지만 환승이 없어요</p>
+                        <div class="transfer_information">
+                            <p class="total_walking_time">총 <b>00분</b> 중 도보 <b>00분</b></p>
                         </div>
-                    </div>
-                </div>
-                <div class="comfortable_buses">
-                    <p><b>11분</b> 더 걸리지만 환승이 없어요</p>
-                    <div class="transfer_information">
-                        <p class="total_walking_time">총 <b>00분</b> 중 도보 <b>00분</b></p>
-                    </div>
-                    <div class="comfortable_bus">
-                        <div class="bus_profile_wrap">
-                            <div class="bus_profile">
-                                <div class="bus_category">
-                                    <p>지선</p>
-                                </div>
-                                <div class="bus_number">
-                                    <p>6006</p>
+                        <div class="comfortable_bus">
+                            <div class="bus_profile_wrap">
+                                <div class="bus_profile">
+                                    <div class="bus_category">
+                                        <p>지선</p>
+                                    </div>
+                                    <div class="bus_number">
+                                        <p>6006</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="recommend_buses">
+            <!--//list_buses-->
+
+            <!--recommend_buses-->
+            <div class="recommend_buses inner">
                 <h2>다른 버스가 없나 궁금하신가요?</h2>
                 <ul>
                     <li>
@@ -94,7 +118,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
+                            <span><img src="../../image/arrow.svg" alt="방향 아이콘"></span>
                             <div class="bus_profile_wrap">
                                 <div class="bus_profile trasfer_bus">
                                     <div class="bus_category">
@@ -123,7 +147,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
+                            <span><img src="../../image/arrow.svg" alt="방향 아이콘"></span>
                             <div class="bus_profile_wrap">
                                 <div class="bus_profile trasfer_bus">
                                     <div class="bus_category">
@@ -152,7 +176,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
+                            <span><img src="../../image/arrow.svg" alt="방향 아이콘"></span>
                             <div class="bus_profile_wrap">
                                 <div class="bus_profile trasfer_bus">
                                     <div class="bus_category">
@@ -181,7 +205,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
+                            <span><img src="../../image/arrow.svg" alt="방향 아이콘"></span>
                             <div class="bus_profile_wrap">
                                 <div class="bus_profile trasfer_bus">
                                     <div class="bus_category">
@@ -210,7 +234,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><img src="../../image/arrow.png" alt="방향 아이콘"></span>
+                            <span><img src="../../image/arrow.svg" alt="방향 아이콘"></span>
                             <div class="bus_profile_wrap">
                                 <div class="bus_profile trasfer_bus">
                                     <div class="bus_category">
@@ -225,6 +249,7 @@
                     </li>
                 </ul>
             </div>
+            <!--//recommend_buses-->
         </div>
     </div>
 

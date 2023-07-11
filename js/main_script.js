@@ -103,34 +103,9 @@ $(document).ready(function(){
 		initialSlide : 1,
 		swipe:false,
 	});
-
-	//common_modal
-	function modalClose(){
-		$(".modal_wrap").fadeOut(); 
-	}
-
-	//bus_modal
-	$("#bus_confirm").click(function(){
-		modalClose();
-	});
-	$(".station_modal_open").click(function(){        
-		$("#station_modal").css('display','flex').hide().fadeIn();
-	});
-	$("#bus_refresh").click(function(){
-		modalClose();
-	});
-
-	//station_modal
-	$("#station_confirm").click(function(){
-		modalClose();
-	});
-	$(".bus_modal_open").click(function(){        
-		$("#bus_modal").css('display','flex').hide().fadeIn();
-	});
-	$("#station_refresh").click(function(){
-		modalClose(); 
-	});
-
+	
+});
+	
 	//modal_station_slider
 	$(".modal_station_slider").slick({
 		autoplay:false,
@@ -140,7 +115,54 @@ $(document).ready(function(){
 		arrows:false,
 		speed:500,
 		variableWidth:false,
-		
 	});
 
+
+//common_modal
+function modalClose(){
+	$(".modal_wrap").fadeOut(); 
+}
+
+//bus_modal_open
+$(".station_modal_open").click(function(){        
+	$("#station_modal").css('display','flex').hide().fadeIn();
+});
+
+//station_modal_open
+$(".bus_modal_open").click(function(){        
+	$("#bus_modal").css('display','flex').hide().fadeIn();
+});
+
+//modal_close
+$(document).mouseup(function (e){
+	var modalWrap = $(".modal_wrap");
+	if(modalWrap.has(e.target).length === 0){
+		modalClose();
+	}
+});
+
+
+/* buslist 서치 창 띄우기 */
+
+//함수 정의
+function makeOverlay(){
+	$(".search_overlay").css("display","flex");
+}
+
+function closeOverlay(){
+	$(".search_overlay").css("display","none");
+}
+
+//버튼 클릭시
+$('.searchicon').click(function(){
+	makeOverlay();
+	return false;
+ });
+
+ //닫기
+ $(document).mouseup(function (e){
+	var searchOverlay = $(".search_overlay");
+	if(searchOverlay.has(e.target).length === 0){
+		closeOverlay();
+	}
 });
