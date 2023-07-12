@@ -70,9 +70,7 @@
 /*** arrow ***/
 .list_stations{position:relative;}
 .list_stations #btn_prev,
-.list_stations #btn_next{display:flex; align-items:center; justify-content:center; position:absolute; width:35px; height:120px; top:55%; transform:translateY(-50%); z-index:99; cursor:pointer;}
-.list_stations #btn_prev img,
-.list_stations #btn_next img{width:35px; height:35px;}
+.list_stations #btn_next{display:flex; align-items:center; justify-content:center; position:absolute; width:35px; height:120px; top:55%; transform:translateY(-50%); z-index:999; cursor:pointer;}
 .list_stations #btn_prev{left:3%;}
 .list_stations #btn_next{right:3%;}
 
@@ -115,7 +113,7 @@
 .bus_details .bus_congestion > span img{width:100%;}
 
 /**** 혼잡도 display 옵션 ****/
-.bus_details .bus_congestion .congestion1_icon{display:none;} /* 쾌적 */
+.bus_details .bus_congestion .congestion1_icon{display:block;} /* 쾌적 */
 .bus_details .bus_congestion .congestion2_icon{display:none;} /* 한산 */
 .bus_details .bus_congestion .congestion3_icon{display:none;} /* 혼잡 */
 .bus_details .bus_congestion .congestion4_icon{display:none;} /* 대혼잡 */
@@ -126,9 +124,9 @@
 .bus_details .bus_statements span img{width:100%;}
 
 /**** 저상버스 display 옵션 ****/
-.bus_details .bus_statements .accessible{display:none;} /* 저상버스 */
+.bus_details .bus_statements .accessible{display:block;} /* 저상버스 */
 .bus_details .bus_statements .nonaccessible{display:none;} /* 일반버스(계단) */
-.bus_details .bus_statements .unservice{display:block;} /* 이용 불가 */
+.bus_details .bus_statements .unservice{display:none;} /* 이용 불가 */
 
 
 /**** estimated_and_name ****/
@@ -222,8 +220,9 @@
 .rebrowsing > h2{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
 .rebrowsing .rebrowsing_box{display:flex; justify-content:space-between; align-items:center; width:100%; height:50px;}
 .rebrowsing .rebrowsing_box .formtag_area{width:100%; margin-right:10px;}
+.rebrowsing .rebrowsing_box span{cursor:pointer;}
 .rebrowsing .rebrowsing_box span,
-.rebrowsing .rebrowsing_box span img{width:25px;}
+.rebrowsing .rebrowsing_box span img{width:40px;}
 
 /**** display 옵션 ****/
 .near_recommend_wrap{display:none;}/* 여기서 탈 수 있어요 */
@@ -233,7 +232,10 @@
 /**** body_bottombox ****/
 .body_bottombox{padding:30px;}
 .recommending .recommend_statement h2{font-size:21px; font-weight:400; font-family:'Noto Sans KR'; margin-bottom:10px;}
-.recommending .recommend_statement .no_replace{display:none;}
+
+/**** display 옵션 ****/
+.recommending .recommend_statement .replace{display:block;} /* 대신 탈 수 있어요 */
+.recommending .recommend_statement .no_replace{display:none;} /* 다음 차량이 없어요 */
 
 .recommend_list ul li{margin-bottom:15px;}
 .recommend_list ul li:last-child{margin-bottom:0;}
@@ -264,10 +266,10 @@
 
 .where_to_go .titlebox_where_to_go{position:relative; display:flex; align-items:center; justify-content:center; width:100%; padding-bottom:5px; height:35px;}
 .where_to_go .titlebox_where_to_go h2{font-size:21px; font-weight:500; margin-bottom:10px;}
-.where_to_go .titlebox_where_to_go .top_button{display:none; margin-bottom:10px;}
+.where_to_go .titlebox_where_to_go .top_button{display:none; width:30px; height:30px; background:url(../image/topbutton.svg) no-repeat; margin-bottom:10px;}
 .where_to_go .searchingbox_where_to_go{display:flex; align-items:center;}
 .where_to_go .searchingbox_where_to_go .formtag_area{width:100%;}
-.where_to_go .searchingbox_where_to_go .searchicon img{margin-left:10px; width:25px; height:auto;}
+.where_to_go .searchingbox_where_to_go .searchicon img{margin-left:10px; width:40px; height:auto;}
 .addshadow{box-shadow: 5px 10px 10px 1px rgba(0,0,0,.1);}
 
 /* keyboard_area */
