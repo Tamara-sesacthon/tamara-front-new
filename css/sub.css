@@ -4,14 +4,14 @@
 
 /* bus_list.html */
 .search{position:relative; height:100px; background:#fff; padding:15px;}
-.search .homeicon img{position:absolute; left:13px; top:38px; width:35px; height:auto;}
-.search .searchicon img{position:absolute; right:13px; top:38px; width:25px; height:auto;}
+.search .homeicon{display:inline-block; position:absolute; left:13px; top:38px; width:35px; height:35px; background:url(../image/home_icon.svg) no-repeat;}
+.search .searchicon img{position:absolute; right:14px; top:30px; width:40px; height:auto;}
 
 .buslist_contents{width:100%; max-width:768px; position:relative;}
 .search_overlay{position:fixed; top:0; width:100%; max-width:768px; height:100px; background:#fff; padding:15px; display:none; z-index:99; box-shadow: 5px 10px 10px 1px rgba(0,0,0,.1);}
 .search_overlay .search_overlay_content{display:flex; align-items:center;}
 .search_overlay .search_overlay_content .formtag_area{width:100%;}
-.search_overlay .search_overlay_content .searchicon img{margin-left:15px; width:25px; height:auto;}
+.search_overlay .search_overlay_content .searchicon img{margin-left:15px; width:40px; height:auto;}
 
 /** fixed_desitination : 확정된 목적지 **/
 .box_fixed_destination{position:relative; width:100%; height:160px; border:1px solid #aaa; margin-top:15px; padding:15px;
