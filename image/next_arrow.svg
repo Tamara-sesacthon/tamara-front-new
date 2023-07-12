@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+  <g id="_레이어_1-2" data-name="레이어 1">
+    <g>
+      <g>
+        <circle cx="17.5" cy="17.5" r="17.15" style="fill: #fff;"/>
+        <path d="m17.5.7c9.26,0,16.8,7.54,16.8,16.8s-7.54,16.8-16.8,16.8S.7,26.76.7,17.5,8.24.7,17.5.7m0-.7C7.84,0,0,7.84,0,17.5s7.84,17.5,17.5,17.5,17.5-7.84,17.5-17.5S27.16,0,17.5,0h0Z" style="fill: #a9a9a9;"/>
+      </g>
+      <polyline points="13.38 9.25 21.62 17.5 13.38 25.75" style="fill: #fff; stroke: #a9a9a9; stroke-miterlimit: 10; stroke-width: .7px;"/>
+    </g>
+  </g>
+</svg>
